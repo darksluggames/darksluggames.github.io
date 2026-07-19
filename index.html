@@ -108,10 +108,10 @@
             }
             .studio-manifesto strong { color: #fff !important; }
 
-            /* --- PROJECT TILE CUSTOM HOVER OVERRIDES --- */
-            /* Completely kills both the red filter AND the white crosshair lines! */
-            .tiles article.clean-tile > .image:before,
-            .tiles article.clean-tile > .image:after {
+            /* --- PROJECT TILE CUSTOM OVERRIDES --- */
+            /* Completely kills BOTH the red filter AND the white crosshair lines on ALL tiles! */
+            .tiles article > .image:before,
+            .tiles article > .image:after {
                 display: none !important;
                 content: none !important;
             }
@@ -121,21 +121,45 @@
             .tiles article.clean-tile:hover > .image img {
                 transform: scale(1.08) !important;
             }
+            
+            /* Pure Black Styling for Coming Soon & Classified Tiles */
+            .tiles article.black-tile {
+                background-color: #000000 !important;
+                border: 1px solid rgba(255, 255, 255, 0.15) !important;
+                transition: border-color 0.25s ease !important;
+            }
+            .tiles article.black-tile:hover {
+                border-color: #fa5c5c !important;
+            }
+            .tiles article.black-tile > .image {
+                background-color: #000000 !important;
+            }
+            .tiles article.black-tile > .image img {
+                opacity: 0 !important; /* Hides stock photos so it renders as pure black */
+            }
+            .tiles article.black-tile h2,
+            .tiles article.black-tile p {
+                color: #ffffff !important;
+                text-shadow: 0 0 10px rgba(0,0,0,0.8);
+            }
 
-            /* --- CLEAN EMAIL FOOTER OVERRIDES --- */
+            /* --- INDESTRUCTIBLE DARK FOOTER OVERRIDES --- */
             footer#footer {
                 padding: 3em 0 2em 0 !important;
                 border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
                 margin-top: 4em !important;
+                background: transparent !important;
+                color: #c8cbe2 !important;
             }
             .email-contact-box {
-                background: rgba(255, 255, 255, 0.02);
-                border: 1px solid rgba(255, 255, 255, 0.05);
-                border-left: 4px solid #00f2fe;
+                background: rgba(255, 255, 255, 0.02) !important;
+                border: 1px solid rgba(255, 255, 255, 0.05) !important;
+                border-left: 4px solid #00f2fe !important;
                 padding: 1.5em 2em;
                 border-radius: 4px 8px 8px 4px;
                 display: inline-block;
                 margin-bottom: 2em;
+                color: #c8cbe2 !important;
             }
             .email-contact-box h3 {
                 color: #fff !important;
@@ -147,7 +171,7 @@
             .email-contact-box p {
                 margin: 0 !important;
                 font-size: 1.1em;
-                color: #b0b4d0;
+                color: #b0b4d0 !important;
             }
             .email-contact-box a {
                 color: #00f2fe !important;
@@ -167,7 +191,7 @@
                     <header id="header">
                         <div class="inner">
                             <a href="index.html" class="logo">
-                                <span class="symbol"><img src="images/dsg-vec.jpg" onerror="this.onerror=null; this.src='dsg-vec.jpg'; this.onerror=function(){this.onerror=null; this.src='dsg-vec.png';};" alt="DSG Logo" /></span>
+                                <span class="symbol"><img src="dsg-vec.png" onerror="this.onerror=null; this.src='dsg-vec.jpg'; this.onerror=function(){this.onerror=null; this.src='images/dsg-vec.png';};" alt="DSG Logo" /></span>
                                 <span class="title">DARK SLUG GAMES</span>
                             </a>
                             <nav>
@@ -227,10 +251,10 @@
                             <h3 class="custom-section-title" style="margin-top: 3.5em !important;">Projects Library</h3>
                             <section class="tiles">
                                 
-                                <!-- PROJECT 1: IT SPEAKS (No Red X, No White Lines, Pure Cover Art Zoom!) -->
+                                <!-- PROJECT 1: IT SPEAKS (Clean Tile with Zero White X Lines!) -->
                                 <article class="style1 clean-tile">
                                     <span class="image">
-                                        <img src="images/coverart.jpg" onerror="this.onerror=null; this.src='coverart.jpg'; this.onerror=function(){this.onerror=null; this.src='images/coverart.png';};" alt="IT SPEAKS Cover Art" />
+                                        <img src="coverart.jpg" onerror="this.onerror=null; this.src='images/coverart.jpg'; this.onerror=function(){this.onerror=null; this.src='coverart.png';};" alt="IT SPEAKS Cover Art" />
                                     </span>
                                     <a href="https://darksluggames.itch.io/it-speaks" target="_blank">
                                         <div class="content">
@@ -239,8 +263,8 @@
                                     </a>
                                 </article>
 
-                                <!-- PROJECT 2: COMING SOON -->
-                                <article class="style2">
+                                <!-- PROJECT 2: COMING SOON (Pure Black Tile with White Text!) -->
+                                <article class="style2 black-tile">
                                     <span class="image">
                                         <img src="images/pic02.jpg" alt="Coming Soon" />
                                     </span>
@@ -252,8 +276,8 @@
                                     </a>
                                 </article>
 
-                                <!-- PROJECT 3: CLASSIFIED -->
-                                <article class="style3">
+                                <!-- PROJECT 3: CLASSIFIED (Pure Black Tile with White Text!) -->
+                                <article class="style3 black-tile">
                                     <span class="image">
                                         <img src="images/pic03.jpg" alt="Coming Soon" />
                                     </span>
@@ -270,7 +294,7 @@
                         </div>
                     </div>
 
-                <!-- Clean Footer (No Forms, No Social Clutter, Pure Email Contact) -->
+                <!-- Clean Indestructible Footer -->
                     <footer id="footer">
                         <div class="inner">
                             <div class="email-contact-box">
