@@ -17,7 +17,7 @@
                 color: #c8cbe2 !important;
             }
 
-            /* --- MASSIVE HEADER & LOGO OVERRIDES --- */
+            /* --- MASSIVE HEADER & LOGO OVERRIDES (Indestructible Sizing!) --- */
             header#header {
                 padding-top: 2em !important;
                 padding-bottom: 2em !important;
@@ -31,13 +31,18 @@
             .logo .symbol {
                 background: transparent !important;
                 padding: 0 !important;
-                margin-right: -10px !important;
+                margin-right: 20px !important;
                 border: none !important;
+                display: flex !important;
+                align-items: center !important;
             }
             .logo .symbol img {
-                max-height: 240px !important;
-                width: auto !important;
+                height: 90px !important;
+                width: 90px !important;
+                max-height: none !important;
+                max-width: none !important;
                 display: block !important;
+                object-fit: contain !important;
             }
             .logo .title {
                 font-size: 2.6em !important;

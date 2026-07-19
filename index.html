@@ -17,7 +17,7 @@
                 color: #c8cbe2 !important;
             }
 
-            /* --- MASSIVE HEADER & LOGO OVERRIDES --- */
+            /* --- MASSIVE HEADER & LOGO OVERRIDES (Indestructible Sizing!) --- */
             header#header {
                 padding-top: 2em !important;
                 padding-bottom: 2em !important;
@@ -31,14 +31,18 @@
             .logo .symbol {
                 background: transparent !important;
                 padding: 0 !important;
-                margin-right: -10px !important;
+                margin-right: 20px !important; /* Clean positive space, zero overlap! */
                 border: none !important;
+                display: flex !important;
+                align-items: center !important;
             }
-            /* Forced Massive 240px Logo Rendering */
             .logo .symbol img {
-                max-height: 240px !important;
-                width: auto !important;
+                height: 90px !important; /* Explicit 90px height forces it large everywhere */
+                width: 90px !important;  /* Locks square aspect ratio */
+                max-height: none !important;
+                max-width: none !important;
                 display: block !important;
+                object-fit: contain !important;
             }
             .logo .title {
                 font-size: 2.6em !important;
@@ -109,7 +113,6 @@
             .studio-manifesto strong { color: #fff !important; }
 
             /* --- PROJECT TILE CUSTOM OVERRIDES --- */
-            /* Completely kills BOTH the red filter AND the white crosshair lines on ALL tiles! */
             .tiles article > .image:before,
             .tiles article > .image:after {
                 display: none !important;
@@ -135,7 +138,7 @@
                 background-color: #000000 !important;
             }
             .tiles article.black-tile > .image img {
-                opacity: 0 !important; /* Hides stock photos so it renders as pure black */
+                opacity: 0 !important;
             }
             .tiles article.black-tile h2,
             .tiles article.black-tile p {
@@ -251,7 +254,7 @@
                             <h3 class="custom-section-title" style="margin-top: 3.5em !important;">Projects Library</h3>
                             <section class="tiles">
                                 
-                                <!-- PROJECT 1: IT SPEAKS (Clean Tile with Zero White X Lines!) -->
+                                <!-- PROJECT 1: IT SPEAKS -->
                                 <article class="style1 clean-tile">
                                     <span class="image">
                                         <img src="coverart.jpg" onerror="this.onerror=null; this.src='images/coverart.jpg'; this.onerror=function(){this.onerror=null; this.src='coverart.png';};" alt="IT SPEAKS Cover Art" />
@@ -263,7 +266,7 @@
                                     </a>
                                 </article>
 
-                                <!-- PROJECT 2: COMING SOON (Pure Black Tile with White Text!) -->
+                                <!-- PROJECT 2: COMING SOON -->
                                 <article class="style2 black-tile">
                                     <span class="image">
                                         <img src="images/pic02.jpg" alt="Coming Soon" />
@@ -276,7 +279,7 @@
                                     </a>
                                 </article>
 
-                                <!-- PROJECT 3: CLASSIFIED (Pure Black Tile with White Text!) -->
+                                <!-- PROJECT 3: CLASSIFIED -->
                                 <article class="style3 black-tile">
                                     <span class="image">
                                         <img src="images/pic03.jpg" alt="Coming Soon" />
