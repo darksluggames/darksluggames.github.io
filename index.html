@@ -1,26 +1,67 @@
 <!DOCTYPE HTML>
 <!--
-    Phantom by HTML5 UP
+    Phantom by HTML5 UP (Modified: Dark Slug Games Studio Edition)
     html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    Free for personal and commercial use under the CCA 3.0 license
 -->
 <html>
     <head>
-        <title>Dark Slug Games - Independent Game Studio</title>
+        <title>DARK SLUG GAMES | Independent Game Studio & Publisher</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
         <style>
-            /* Custom spacing overrides to keep buttons and rows clean */
+            /* --- ATMOSPHERIC STUDIO BACKGROUND --- */
+            body, #wrapper {
+                background: radial-gradient(circle at 50% 0%, #1a1c24 0%, #0d0e12 70%, #050508 100%) !important;
+                color: #c8cbe2 !important;
+            }
+
+            /* --- MASSIVE HEADER & LOGO OVERRIDES --- */
+            header#header {
+                padding-top: 2em !important;
+                padding-bottom: 2em !important;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            }
+            .logo {
+                display: flex !important;
+                align-items: center !important;
+                text-decoration: none !important;
+            }
+            /* Strip the grey hexagon diamond box completely */
+            .logo .symbol {
+                background: transparent !important;
+                padding: 0 !important;
+                margin-right: 18px !important;
+                border: none !important;
+            }
+            .logo .symbol img {
+                max-height: 65px !important; /* Adjusts your vector logo size */
+                width: auto !important;
+                display: block !important;
+            }
+            /* Make DARK SLUG GAMES title massive and bold */
+            .logo .title {
+                font-size: 2.4em !important;
+                font-weight: 900 !important;
+                letter-spacing: 0.18em !important;
+                color: #ffffff !important;
+                text-shadow: 0 0 20px rgba(0, 242, 254, 0.2), 0 0 40px rgba(254, 9, 121, 0.1);
+                line-height: 1.1 !important;
+            }
+
+            /* --- CLEAN SECTION DIVIDERS --- */
             .custom-section-title {
                 margin-top: 2.5em !important;
-                margin-bottom: 0.8em !important;
-                font-weight: 800;
-                letter-spacing: 0.1em;
+                margin-bottom: 1em !important;
+                font-size: 1.1em !important;
+                font-weight: 800 !important;
+                letter-spacing: 0.15em !important;
                 text-transform: uppercase;
+                color: #fff !important;
                 border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-                padding-bottom: 0.3em;
+                padding-bottom: 0.4em;
                 display: block;
                 width: 100%;
             }
@@ -28,14 +69,54 @@
                 margin-bottom: 2em !important;
                 display: flex;
                 flex-wrap: wrap;
-                gap: 10px;
+                gap: 12px;
             }
-            .logo-fix {
-                max-height: 2.5em;
-                width: auto;
-                display: inline-block;
-                vertical-align: middle;
+
+            /* --- TRUE-COLOR BRAND BUTTONS --- */
+            .actions li a.button {
+                font-weight: 700 !important;
+                letter-spacing: 0.08em !important;
+                transition: all 0.2s ease-in-out !important;
+                border-radius: 6px !important;
+                border: none !important;
+                color: #fff !important;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
             }
+            .actions li a.button:hover {
+                transform: translateY(-3px) !important;
+                filter: brightness(1.15) !important;
+            }
+            /* YouTube Red */
+            .btn-youtube { background-color: #FF0000 !important; }
+            /* TikTok Dark with Neon Border */
+            .btn-tiktok { background-color: #111216 !important; border: 2px solid #00f2fe !important; color: #fff !important; }
+            /* Facebook Blue */
+            .btn-facebook { background-color: #1877F2 !important; }
+            /* Instagram Gradient */
+            .btn-instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important; }
+            /* itch.io Coral Red */
+            .btn-itch { background-color: #fa5c5c !important; }
+            /* Steam Deep Navy/Cyan */
+            .btn-steam { background: linear-gradient(135deg, #1b2838 0%, #2a475e 100%) !important; border: 1px solid #66c0f4 !important; }
+            /* Kickstarter Green */
+            .btn-kickstarter { background-color: #05ce78 !important; color: #000 !important; font-weight: 800 !important; }
+            /* Ko-fi Warm Coral Pink */
+            .btn-kofi { background-color: #ff5e5b !important; }
+
+            /* --- STUDIO MANIFESTO TEXT --- */
+            .studio-manifesto {
+                font-size: 1.15em !important;
+                line-height: 1.8 !important;
+                color: #b0b4d0 !important;
+                max-width: 900px;
+                background: rgba(255, 255, 255, 0.02);
+                padding: 1.8em;
+                border-left: 4px solid #fa5c5c;
+                border-radius: 0 8px 8px 0;
+                margin-top: 1.5em !important;
+                margin-bottom: 2em !important;
+            }
+            .studio-manifesto strong { color: #fff !important; }
         </style>
     </head>
     <body class="is-preload">
@@ -46,9 +127,10 @@
                     <header id="header">
                         <div class="inner">
 
-                            <!-- Logo -->
+                            <!-- Massive Studio Logo & Branding -->
                                 <a href="index.html" class="logo">
-                                    <span class="symbol"><img src="DSG-vec.png" alt="DSG" onerror="this.onerror=null; this.src='images/logo.svg';" class="logo-fix" /></span><span class="title">DARK SLUG GAMES</span>
+                                    <span class="symbol"><img src="DSG-vec.png" alt="DSG Logo" /></span>
+                                    <span class="title">DARK SLUG GAMES</span>
                                 </a>
 
                             <!-- Nav -->
@@ -75,41 +157,46 @@
                     <div id="main">
                         <div class="inner">
                             <header>
-                                <h1>Games by a gamer for gamers.<br />
-                                By An Independent Game Studio & Publisher.</h1>
-                                <p>Hi and welcome to the Dark Slug Games hub. This is the place where you can explore what I’m building, check out current projects, watch trailers, and find links to my developer profiles and social accounts.<br /><br />
-                                Thanks for stopping by and taking the time to look around. I hope you find the projects interesting and maybe even a little inspiring. If you're a fellow developer or just someone curious about game creation, feel free to reach out — I’m always open to chatting, sharing advice, or helping where I can.<br /><br />
-                                And remember: stay creative, have fun, keep pushing toward your goals, and never throw away an idea just because it seems strange. No idea is a bad idea until it’s proven otherwise. Keep making cool things.</p>
+                                <h1 style="font-weight: 800; color: #fff; line-height: 1.3;">Games by a gamer for gamers.<br />
+                                <span style="font-size: 0.75em; color: #8f94b8; font-weight: 400;">An Independent Game Studio & Publisher.</span></h1>
+                                
+                                <!-- Consolidated & Polished Studio Manifesto -->
+                                <div class="studio-manifesto">
+                                    Welcome to the official <strong>Dark Slug Games</strong> hub—a dedicated space for experimental, atmospheric, and boundary-pushing indie projects. Whether you're here to watch our latest trailers, explore current development builds, or connect across our developer ecosystems, we're glad you stepped into the shadows. We believe that no idea is too strange to explore, and the best gaming experiences come from raw, uncompromising creativity. Dive into our library below, follow our development journey, and let's keep making cool things together.
+                                </div>
                             </header>
 
                             <!-- SOCIAL MEDIA SECTION -->
                             <h3 class="custom-section-title">Social Media</h3>
                             <ul class="actions">
-                                <li><a href="https://facebook.com/YOURPAGE" class="button icon brands fa-facebook-f">Facebook</a></li>
-                                <li><a href="https://instagram.com/YOURPAGE" class="button icon brands fa-instagram">Instagram</a></li>
-                                <li><a href="https://youtube.com/YOURCHANNEL" class="button icon brands fa-youtube">YouTube</a></li>
-                                <li><a href="https://tiktok.com/@YOURPAGE" class="button icon brands fa-tiktok">TikTok</a></li>
+                                <li><a href="https://youtube.com/YOURCHANNEL" class="button btn-youtube icon brands fa-youtube">YouTube</a></li>
+                                <li><a href="https://tiktok.com/@YOURPAGE" class="button btn-tiktok icon brands fa-tiktok">TikTok</a></li>
+                                <li><a href="https://facebook.com/YOURPAGE" class="button btn-facebook icon brands fa-facebook-f">Facebook</a></li>
+                                <li><a href="https://instagram.com/YOURPAGE" class="button btn-instagram icon brands fa-instagram">Instagram</a></li>
                             </ul>
 
                             <!-- DEVELOPER PORTALS SECTION -->
                             <h3 class="custom-section-title">Developer Portals</h3>
                             <ul class="actions">
-                                <li><a href="https://darksluggames.itch.io" class="button primary icon brands fa-itch-io">itch.io</a></li>
-                                <li><a href="https://store.steampowered.com/" class="button primary icon brands fa-steam">Steam Page</a></li>
+                                <li><a href="https://darksluggames.itch.io" class="button btn-itch icon brands fa-itch-io">itch.io</a></li>
+                                <li><a href="https://store.steampowered.com/" class="button btn-steam icon brands fa-steam">Steam Page</a></li>
                             </ul>
 
                             <!-- SUPPORT THE SHADOWS SECTION -->
                             <h3 class="custom-section-title">Support the Shadows</h3>
                             <ul class="actions">
-                                <li><a href="https://kickstarter.com/" class="button icon solid fa-rocket">Kickstarter</a></li>
-                                <li><a href="https://ko-fi.com/darksluggames" class="button icon solid fa-coffee">Ko-fi Tip Jar</a></li>
+                                <li><a href="https://kickstarter.com/" class="button btn-kickstarter icon solid fa-rocket">Kickstarter</a></li>
+                                <li><a href="https://ko-fi.com/darksluggames" class="button btn-kofi icon solid fa-coffee">Ko-fi Tip Jar</a></li>
                             </ul>
 
                             <!-- PROJECTS LIBRARY SECTION -->
-                            <h3 class="custom-section-title" style="margin-top: 3em !important;">Projects Library</h3>
+                            <h3 class="custom-section-title" style="margin-top: 3.5em !important;">Projects Library</h3>
                             <section class="tiles">
+                                
+                                <!-- PROJECT 1: IT SPEAKS -->
                                 <article class="style1">
                                     <span class="image">
+                                        <!-- REPLACE pic01.jpg with your uploaded cover art filename! -->
                                         <img src="images/pic01.jpg" alt="IT SPEAKS" />
                                     </span>
                                     <a href="generic.html">
@@ -119,6 +206,8 @@
                                         </div>
                                     </a>
                                 </article>
+
+                                <!-- PROJECT 2: COMING SOON -->
                                 <article class="style2">
                                     <span class="image">
                                         <img src="images/pic02.jpg" alt="Coming Soon" />
@@ -130,17 +219,20 @@
                                         </div>
                                     </a>
                                 </article>
+
+                                <!-- PROJECT 3: CLASSIFIED -->
                                 <article class="style3">
                                     <span class="image">
                                         <img src="images/pic03.jpg" alt="Coming Soon" />
                                     </span>
                                     <a href="generic.html">
-                                        <h2>COMING SOON</h2>
+                                        <h2>CLASSIFIED</h2>
                                         <div class="content">
-                                            <p>Classified project. Stay tuned for future announcements.</p>
+                                            <p>Experimental project. Stay tuned for future studio announcements.</p>
                                         </div>
                                     </a>
                                 </article>
+
                             </section>
 
                         </div>
@@ -164,19 +256,17 @@
                                         </div>
                                     </div>
                                     <ul class="actions">
-                                        <li><input type="submit" value="Send" class="primary" /></li>
+                                        <li><input type="submit" value="Send" class="primary" style="background-color: #fa5c5c !important; border: none !important;" /></li>
                                     </ul>
                                 </form>
                             </section>
                             <section>
                                 <h2>Follow</h2>
                                 <ul class="icons">
-                                    <li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
-                                    <li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
-                                    <li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-                                    <li><a href="#" class="icon brands style2 fa-tiktok"><span class="label">TikTok</span></a></li>
-                                    <li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-                                    <li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+                                    <li><a href="https://youtube.com/YOURCHANNEL" class="icon brands style2 fa-youtube"><span class="label">YouTube</span></a></li>
+                                    <li><a href="https://tiktok.com/@YOURPAGE" class="icon brands style2 fa-tiktok"><span class="label">TikTok</span></a></li>
+                                    <li><a href="https://facebook.com/YOURPAGE" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+                                    <li><a href="https://instagram.com/YOURPAGE" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
                                 </ul>
                             </section>
                             <ul class="copyright">
