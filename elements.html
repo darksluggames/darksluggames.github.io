@@ -31,14 +31,14 @@
             .logo .symbol {
                 background: transparent !important;
                 padding: 0 !important;
-                margin-right: 20px !important;
+                margin-right: 20px !important; /* Clean positive space, zero overlap! */
                 border: none !important;
                 display: flex !important;
                 align-items: center !important;
             }
             .logo .symbol img {
-                height: 90px !important;
-                width: 90px !important;
+                height: 90px !important; /* Explicit 90px height forces it large everywhere */
+                width: 90px !important;  /* Locks square aspect ratio */
                 max-height: none !important;
                 max-width: none !important;
                 display: block !important;
