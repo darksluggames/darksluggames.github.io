@@ -17,7 +17,7 @@
                 color: #c8cbe2 !important;
             }
 
-            /* --- HEADER & LOGO OVERRIDES --- */
+            /* --- MASSIVE HEADER & LOGO OVERRIDES --- */
             header#header {
                 padding-top: 2em !important;
                 padding-bottom: 2em !important;
@@ -31,16 +31,16 @@
             .logo .symbol {
                 background: transparent !important;
                 padding: 0 !important;
-                margin-right: 18px !important;
+                margin-right: -10px !important;
                 border: none !important;
             }
             .logo .symbol img {
-                max-height: 65px !important;
+                max-height: 240px !important;
                 width: auto !important;
                 display: block !important;
             }
             .logo .title {
-                font-size: 2.4em !important;
+                font-size: 2.6em !important;
                 font-weight: 900 !important;
                 letter-spacing: 0.18em !important;
                 color: #ffffff !important;
@@ -97,6 +97,42 @@
                 margin-bottom: 2em;
                 display: block;
             }
+
+            /* --- CLEAN EMAIL FOOTER OVERRIDES --- */
+            footer#footer {
+                padding: 3em 0 2em 0 !important;
+                border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+                margin-top: 4em !important;
+            }
+            .email-contact-box {
+                background: rgba(255, 255, 255, 0.02);
+                border: 1px solid rgba(255, 255, 255, 0.05);
+                border-left: 4px solid #00f2fe;
+                padding: 1.5em 2em;
+                border-radius: 4px 8px 8px 4px;
+                display: inline-block;
+                margin-bottom: 2em;
+            }
+            .email-contact-box h3 {
+                color: #fff !important;
+                margin-bottom: 0.3em !important;
+                font-size: 1.2em !important;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+            }
+            .email-contact-box p {
+                margin: 0 !important;
+                font-size: 1.1em;
+                color: #b0b4d0;
+            }
+            .email-contact-box a {
+                color: #00f2fe !important;
+                font-weight: 700;
+                text-decoration: none;
+            }
+            .email-contact-box a:hover {
+                text-decoration: underline;
+            }
         </style>
     </head>
     <body class="is-preload">
@@ -107,7 +143,7 @@
                     <header id="header">
                         <div class="inner">
                             <a href="index.html" class="logo">
-                                <span class="symbol"><img src="dsg-vec.png" alt="DSG Logo" /></span>
+                                <span class="symbol"><img src="images/dsg-vec.jpg" onerror="this.onerror=null; this.src='dsg-vec.jpg'; this.onerror=function(){this.onerror=null; this.src='dsg-vec.png';};" alt="DSG Logo" /></span>
                                 <span class="title">DARK SLUG GAMES</span>
                             </a>
                             <nav>
@@ -117,14 +153,14 @@
                             </nav>
                         </div>
                     </header>
- 
-                <!-- Uniform 3-Option Menu -->
+
+                <!-- Menu -->
                     <nav id="menu">
                         <h2>Menu</h2>
                         <ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="generic.html">Who is DARK SLUG GAMES</a></li>                            
-							<li><a href="elements.html">Legal</a></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="generic.html">Who is DARK SLUG GAMES</a></li>                            
+                            <li><a href="elements.html">Legal</a></li>
                         </ul>
                     </nav>
 
@@ -136,21 +172,18 @@
                             <span class="legal-subtitle">Copyright, Trademarks, & Terms of Use</span>
                             <span class="last-updated">Last Updated: July 2026</span>
 
-                            <!-- SECTION 1: COPYRIGHT & TRADEMARK OWNERSHIP -->
                             <div class="legal-box">
                                 <h3>1. Intellectual Property Ownership</h3>
                                 <p>All content associated with this website, studio brand, and software portfolio—including but not limited to the studio names <strong>Dark Slug Games™</strong> and <strong>NightHunterThornCook™</strong>, vector logos, brand iconography, game titles (including <em>"It Speaks"</em>), narrative text, visual assets, audio recordings, source code, and interactive media—is the exclusive intellectual property of NightHunterThornCook and Dark Slug Games, protected by United States and International copyright, trademark, and intellectual property laws.</p>
                                 <p>No portion of this website, its associated artwork, or downloadable software builds may be reproduced, redistributed, mirrored, sold, or modified without explicit, prior written consent from the copyright holder.</p>
                             </div>
 
-                            <!-- SECTION 2: NOMINATIVE FAIR USE / THIRD-PARTY TRADEMARKS -->
                             <div class="legal-box">
                                 <h3>2. Third-Party Trademarks & Nominative Fair Use</h3>
                                 <p>Throughout this website and associated developer communications, Dark Slug Games may reference third-party video games, franchises, or publishing entities (such as <em>Resident Evil™</em>, <em>Silent Hill™</em>, <em>Fatal Frame™</em>, <em>Manhunt™</em>, Capcom Co., Ltd., Konami Digital Entertainment, or Sony Interactive Entertainment) for purely descriptive, historical, or biographical purposes to express artistic inspiration and game design philosophy.</p>
                                 <p>These references constitute **Nominative Fair Use** under trademark law. Dark Slug Games is an entirely independent, self-funded developer entity and claims no ownership over, nor affiliation, endorsement, or sponsorship with any third-party intellectual properties, studios, or publishers mentioned. All third-party trademarks, product names, and company names remain the exclusive property of their respective owners.</p>
                             </div>
 
-                            <!-- SECTION 3: STREAMING & CONTENT CREATOR BROADCAST LICENSE -->
                             <div class="legal-box">
                                 <h3>3. Content Creator & Video Broadcast Policy</h3>
                                 <p>Dark Slug Games actively supports the gaming community, content creators, and journalists. We grant express, revocable, worldwide permission to video game streamers, YouTubers, reviewers, and content creators to broadcast, record, review, and monetize video footage and Let's Play content of our games, demos, and trailers across digital video platforms (including YouTube, Twitch, TikTok, and Facebook Gaming).</p>
@@ -162,14 +195,12 @@
                                 </ul>
                             </div>
 
-                            <!-- SECTION 4: DISCLAIMER OF WARRANTY & LIABILITY -->
                             <div class="legal-box">
                                 <h3>4. Software Disclaimer & Limitation of Liability</h3>
                                 <p>All software builds, prototypes, demos, and downloadable assets provided directly through this hub or linked third-party developer portals (including itch.io and Steam) are provided strictly on an <strong>"AS IS" and "AS AVAILABLE" basis</strong>, without warranties of any kind, either express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
                                 <p>In no event shall Dark Slug Games or NightHunterThornCook be held liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including but not limited to hardware instability, loss of data, or system interruption) arising in any way out of the downloading, installation, or execution of our interactive software or web applications.</p>
                             </div>
 
-                            <!-- SECTION 5: EXTERNAL PORTAL LINKS -->
                             <div class="legal-box">
                                 <h3>5. External Storefronts & Third-Party Services</h3>
                                 <p>This website contains hyperlinks connecting users to external digital platforms, including Valve Corporation's Steam portal, itch.io, Kickstarter, Ko-fi, and various social media platforms. Dark Slug Games does not govern or control the privacy policies, data collection practices, or terms of service of these third-party websites. Accessing external platforms via hyperlinks provided on this website is done entirely at the user's own discretion and risk.</p>
@@ -178,39 +209,16 @@
                         </div>
                     </div>
 
-                <!-- Footer -->
+                <!-- Clean Footer -->
                     <footer id="footer">
                         <div class="inner">
-                            <section>
-                                <h2>Get in touch</h2>
-                                <form method="post" action="#">
-                                    <div class="fields">
-                                        <div class="field half">
-                                            <input type="text" name="name" id="name" placeholder="Name" />
-                                        </div>
-                                        <div class="field half">
-                                            <input type="email" name="email" id="email" placeholder="Email" />
-                                        </div>
-                                        <div class="field">
-                                            <textarea name="message" id="message" placeholder="Message"></textarea>
-                                        </div>
-                                    </div>
-                                    <ul class="actions">
-                                        <li><input type="submit" value="Send" class="primary" style="background-color: #fa5c5c !important; border: none !important;" /></li>
-                                    </ul>
-                                </form>
-                            </section>
-                            <section>
-                                <h2>Follow</h2>
-                                <ul class="icons">
-                                    <li><a href="https://youtube.com/YOURCHANNEL" class="icon brands style2 fa-youtube"><span class="label">YouTube</span></a></li>
-                                    <li><a href="https://tiktok.com/@YOURPAGE" class="icon brands style2 fa-tiktok"><span class="label">TikTok</span></a></li>
-                                    <li><a href="https://facebook.com/YOURPAGE" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
-                                    <li><a href="https://instagram.com/YOURPAGE" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-                                </ul>
-                            </section>
+                            <div class="email-contact-box">
+                                <h3>Direct Studio Contact</h3>
+                                <p>For press inquiries, publisher relations, or general support, contact us directly at:<br />
+                                <a href="mailto:contact@darksluggames.com">contact@darksluggames.com</a></p>
+                            </div>
                             <ul class="copyright">
-                                <li>&copy; Legal Notice: © 2026 Dark Slug Games™. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                                <li>&copy; Legal Notice: © 2026 Dark Slug Games™. All rights reserved.</li><li>Design: <a href="index.html">DSG</a></li>
                             </ul>
                         </div>
                     </footer>

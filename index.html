@@ -1,8 +1,7 @@
 <!DOCTYPE HTML>
 <!--
     Phantom by HTML5 UP (Modified: Dark Slug Games Executive Edition)
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license
+    html5up.net | @ajlkn | Free under CCA 3.0 license
 -->
 <html>
     <head>
@@ -32,12 +31,12 @@
             .logo .symbol {
                 background: transparent !important;
                 padding: 0 !important;
-                margin-right: 25px !important;
+                margin-right: -10px !important;
                 border: none !important;
             }
-            /* Made the DSG Logo 10x bigger! */
+            /* Forced Massive 240px Logo Rendering */
             .logo .symbol img {
-                max-height: 180px !important;
+                max-height: 240px !important;
                 width: auto !important;
                 display: block !important;
             }
@@ -110,16 +109,53 @@
             .studio-manifesto strong { color: #fff !important; }
 
             /* --- PROJECT TILE CUSTOM HOVER OVERRIDES --- */
-            /* Removes the red 'X' filter overlay completely from IT SPEAKS */
-            .tiles article.clean-tile > .image:before {
+            /* Completely kills both the red filter AND the white crosshair lines! */
+            .tiles article.clean-tile > .image:before,
+            .tiles article.clean-tile > .image:after {
                 display: none !important;
+                content: none !important;
             }
-            /* Keeps the image clear and adds a smooth zoom effect on hover */
             .tiles article.clean-tile > .image img {
                 transition: transform 0.35s ease-in-out !important;
             }
             .tiles article.clean-tile:hover > .image img {
                 transform: scale(1.08) !important;
+            }
+
+            /* --- CLEAN EMAIL FOOTER OVERRIDES --- */
+            footer#footer {
+                padding: 3em 0 2em 0 !important;
+                border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+                margin-top: 4em !important;
+            }
+            .email-contact-box {
+                background: rgba(255, 255, 255, 0.02);
+                border: 1px solid rgba(255, 255, 255, 0.05);
+                border-left: 4px solid #00f2fe;
+                padding: 1.5em 2em;
+                border-radius: 4px 8px 8px 4px;
+                display: inline-block;
+                margin-bottom: 2em;
+            }
+            .email-contact-box h3 {
+                color: #fff !important;
+                margin-bottom: 0.3em !important;
+                font-size: 1.2em !important;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+            }
+            .email-contact-box p {
+                margin: 0 !important;
+                font-size: 1.1em;
+                color: #b0b4d0;
+            }
+            .email-contact-box a {
+                color: #00f2fe !important;
+                font-weight: 700;
+                text-decoration: none;
+            }
+            .email-contact-box a:hover {
+                text-decoration: underline;
             }
         </style>
     </head>
@@ -130,24 +166,19 @@
                 <!-- Header -->
                     <header id="header">
                         <div class="inner">
-
-                            <!-- Massive Studio Logo & Branding (10x Bigger!) -->
-                                <a href="index.html" class="logo">
-                                    <span class="symbol"><img src="images/dsg-vec.png" onerror="this.onerror=null; this.src='dsg-vec.png'; this.onerror=function(){this.onerror=null; this.src='dsg-vec.jpg';};" alt="DSG Logo" /></span>
-                                    <span class="title">DARK SLUG GAMES</span>
-                                </a>
-
-                            <!-- Nav -->
-                                <nav>
-                                    <ul>
-                                        <li><a href="#menu">Menu</a></li>
-                                    </ul>
-                                </nav>
-
+                            <a href="index.html" class="logo">
+                                <span class="symbol"><img src="images/dsg-vec.jpg" onerror="this.onerror=null; this.src='dsg-vec.jpg'; this.onerror=function(){this.onerror=null; this.src='dsg-vec.png';};" alt="DSG Logo" /></span>
+                                <span class="title">DARK SLUG GAMES</span>
+                            </a>
+                            <nav>
+                                <ul>
+                                    <li><a href="#menu">Menu</a></li>
+                                </ul>
+                            </nav>
                         </div>
                     </header>
 
-                <!-- Uniform 3-Option Menu -->
+                <!-- Menu -->
                     <nav id="menu">
                         <h2>Menu</h2>
                         <ul>
@@ -196,13 +227,12 @@
                             <h3 class="custom-section-title" style="margin-top: 3.5em !important;">Projects Library</h3>
                             <section class="tiles">
                                 
-                                <!-- PROJECT 1: IT SPEAKS (No Red X, No Redundant Text, Pure Cover Art Zoom!) -->
+                                <!-- PROJECT 1: IT SPEAKS (No Red X, No White Lines, Pure Cover Art Zoom!) -->
                                 <article class="style1 clean-tile">
                                     <span class="image">
                                         <img src="images/coverart.jpg" onerror="this.onerror=null; this.src='coverart.jpg'; this.onerror=function(){this.onerror=null; this.src='images/coverart.png';};" alt="IT SPEAKS Cover Art" />
                                     </span>
                                     <a href="https://darksluggames.itch.io/it-speaks" target="_blank">
-                                        <!-- Redundant title removed so your cover art speaks for itself! -->
                                         <div class="content">
                                             <p style="background: rgba(0,0,0,0.8); padding: 10px; border-radius: 4px;">Your virtual pet questions the nature of reality. Talk into your mic and try to keep it alive.</p>
                                         </div>
@@ -240,39 +270,16 @@
                         </div>
                     </div>
 
-                <!-- Footer -->
+                <!-- Clean Footer (No Forms, No Social Clutter, Pure Email Contact) -->
                     <footer id="footer">
                         <div class="inner">
-                            <section>
-                                <h2>Get in touch</h2>
-                                <form method="post" action="#">
-                                    <div class="fields">
-                                        <div class="field half">
-                                            <input type="text" name="name" id="name" placeholder="Name" />
-                                        </div>
-                                        <div class="field half">
-                                            <input type="email" name="email" id="email" placeholder="Email" />
-                                        </div>
-                                        <div class="field">
-                                            <textarea name="message" id="message" placeholder="Message"></textarea>
-                                        </div>
-                                    </div>
-                                    <ul class="actions">
-                                        <li><input type="submit" value="Send" class="primary" style="background-color: #fa5c5c !important; border: none !important;" /></li>
-                                    </ul>
-                                </form>
-                            </section>
-                            <section>
-                                <h2>Follow</h2>
-                                <ul class="icons">
-                                    <li><a href="https://www.youtube.com/@DarkSlugGames" target="_blank" class="icon brands style2 fa-youtube"><span class="label">YouTube</span></a></li>
-                                    <li><a href="https://www.tiktok.com/@darksluggames" target="_blank" class="icon brands style2 fa-tiktok"><span class="label">TikTok</span></a></li>
-                                    <li><a href="https://www.facebook.com/profile.php?id=61591896429550" target="_blank" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
-                                    <li><a href="https://www.instagram.com/darksluggames/" target="_blank" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-                                </ul>
-                            </section>
+                            <div class="email-contact-box">
+                                <h3>Direct Studio Contact</h3>
+                                <p>For press inquiries, publisher relations, or general support, contact us directly at:<br />
+                                <a href="mailto:contact@darksluggames.com">contact@darksluggames.com</a></p>
+                            </div>
                             <ul class="copyright">
-                                <li>&copy; Legal Notice: © 2026 Dark Slug Games™. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                                <li>&copy; Legal Notice: © 2026 Dark Slug Games™. All rights reserved.</li><li>Design: <a href="index.html">DSG</a></li>
                             </ul>
                         </div>
                     </footer>
