@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <!--
-    Phantom by HTML5 UP (Modified: Dark Slug Games Executive Two-Column Edition)
+    Phantom by HTML5 UP (Modified: Dark Slug Games Immersive Edition)
     html5up.net | @ajlkn | Free under CCA 3.0 license
 -->
 <html>
@@ -13,18 +13,18 @@
         <style>
             /* --- ATMOSPHERIC STUDIO BACKGROUND --- */
             body, #wrapper {
-                background: radial-gradient(circle at 50% 0%, #1a1c24 0%, #0d0e12 70%, #050508 100%) !important;
+                background: radial-gradient(circle at 50% 0%, #161821 0%, #0d0e12 60%, #030305 100%) !important;
                 color: #c8cbe2 !important;
             }
 
             /* --- SLEEK 3D GLASSMORPHISM HEADER BANNER --- */
             header#header {
-                padding: 1.2em 0 !important;
-                background: rgba(13, 14, 18, 0.90) !important;
-                backdrop-filter: blur(12px) !important;
-                -webkit-backdrop-filter: blur(12px) !important;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8), 0 1px 0 rgba(250, 92, 92, 0.3) !important;
+                padding: 1.5em 0 !important;
+                background: rgba(10, 11, 15, 0.85) !important;
+                backdrop-filter: blur(15px) !important;
+                -webkit-backdrop-filter: blur(15px) !important;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9), 0 1px 0 rgba(0, 242, 254, 0.2) !important;
                 position: relative;
                 z-index: 10000;
             }
@@ -35,42 +35,46 @@
                 position: relative !important;
                 flex-wrap: wrap;
                 gap: 15px;
+                max-width: 1400px !important; /* Expands the header width to push logo further left */
             }
-            #header nav {
-                position: static !important;
-                right: auto !important;
-                top: auto !important;
-            }
+            #header nav { position: static !important; right: auto !important; top: auto !important; }
             #header nav ul { margin: 0 !important; }
             
+            /* --- MASSIVE 3D INTERACTIVE LOGO --- */
             .logo {
                 display: flex !important;
                 align-items: center !important;
                 text-decoration: none !important;
+                perspective: 1000px; /* Activates 3D Space */
+                transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.27);
+            }
+            .logo:hover {
+                transform: scale(1.05) rotateX(5deg) rotateY(-5deg); /* Subtle 3D tilt on hover! */
             }
             .logo .symbol {
                 background: transparent !important;
                 padding: 0 !important;
-                margin-right: 20px !important;
+                margin-right: 25px !important;
                 border: none !important;
                 display: flex !important;
                 align-items: center !important;
             }
             .logo .symbol img {
-                height: 80px !important;
-                width: 80px !important;
+                height: 130px !important; /* MASSIVE LOGO UPGRADE */
+                width: 130px !important;
                 max-height: none !important;
                 max-width: none !important;
                 display: block !important;
                 object-fit: contain !important;
+                filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.8));
             }
             .logo .title {
-                font-size: 2.4em !important;
+                font-size: 3.5em !important; /* MASSIVE TEXT UPGRADE */
                 font-weight: 900 !important;
-                letter-spacing: 0.18em !important;
+                letter-spacing: 0.15em !important;
                 color: #ffffff !important;
-                text-shadow: 0 0 20px rgba(0, 242, 254, 0.2), 0 0 40px rgba(254, 9, 121, 0.1);
-                line-height: 1.1 !important;
+                text-shadow: 0 0 25px rgba(0, 242, 254, 0.3), 0 0 50px rgba(254, 9, 121, 0.15);
+                line-height: 1 !important;
             }
 
             /* Right-Hand Banner Controls */
@@ -80,43 +84,44 @@
                 gap: 20px;
             }
             .banner-action-btn {
-                background: rgba(250, 92, 92, 0.15);
-                border: 1px solid #fa5c5c;
+                background: rgba(0, 242, 254, 0.1);
+                border: 1px solid #00f2fe;
                 color: #ffffff !important;
-                padding: 0.55em 1.2em;
-                border-radius: 4px;
-                font-weight: 700;
-                font-size: 0.85em;
+                padding: 0.6em 1.4em;
+                border-radius: 6px;
+                font-weight: 800;
+                font-size: 0.9em;
                 letter-spacing: 0.1em;
                 text-transform: uppercase;
                 text-decoration: none !important;
-                transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+                transition: all 0.3s ease;
                 white-space: nowrap;
-                box-shadow: 0 0 10px rgba(250, 92, 92, 0.1);
+                box-shadow: 0 0 15px rgba(0, 242, 254, 0.15);
             }
             .banner-action-btn:hover {
-                background: #fa5c5c;
-                box-shadow: 0 0 20px rgba(250, 92, 92, 0.6), 0 4px 10px rgba(0,0,0,0.5);
+                background: #00f2fe;
+                color: #000 !important;
+                box-shadow: 0 0 25px rgba(0, 242, 254, 0.6), 0 4px 15px rgba(0,0,0,0.6);
                 transform: translateY(-2px);
             }
 
             /* --- TWO-COLUMN STUDIO DASHBOARD GRID --- */
             .studio-grid-layout {
                 display: grid;
-                grid-template-columns: 300px 1fr;
-                gap: 50px;
+                grid-template-columns: 280px 1fr;
+                gap: 60px;
                 align-items: start;
                 margin-top: 1.5em;
             }
             .studio-sidebar {
                 background: rgba(255, 255, 255, 0.015);
-                border: 1px solid rgba(255, 255, 255, 0.05);
+                border: 1px solid rgba(255, 255, 255, 0.04);
                 padding: 1.8em;
-                border-radius: 8px;
-                box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+                border-radius: 12px;
+                box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+                backdrop-filter: blur(5px);
             }
             
-            /* --- CLEAN SECTION DIVIDERS --- */
             .custom-section-title {
                 margin-top: 2em !important;
                 margin-bottom: 1em !important;
@@ -125,155 +130,185 @@
                 letter-spacing: 0.15em !important;
                 text-transform: uppercase;
                 color: #fff !important;
-                border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+                border-bottom: 2px solid rgba(255, 255, 255, 0.08);
                 padding-bottom: 0.4em;
                 display: block;
                 width: 100%;
             }
-            .studio-sidebar .custom-section-title:first-child {
-                margin-top: 0 !important;
-            }
-            .actions {
-                margin-bottom: 1.5em !important;
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-                width: 100%;
-            }
-            .actions li {
-                width: 100%;
-                padding-left: 0 !important;
-            }
+            .studio-sidebar .custom-section-title:first-child { margin-top: 0 !important; }
+            .actions { margin-bottom: 1.5em !important; display: flex; flex-direction: column; gap: 12px; width: 100%; }
+            .actions li { width: 100%; padding-left: 0 !important; }
 
-            /* --- TRUE-COLOR BRAND BUTTONS --- */
             .actions li a.button {
-                font-weight: 700 !important;
+                font-weight: 800 !important;
                 letter-spacing: 0.08em !important;
-                transition: all 0.2s ease-in-out !important;
+                transition: all 0.25s ease !important;
                 border-radius: 6px !important;
                 border: none !important;
                 color: #fff !important;
-                box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
+                box-shadow: 0 6px 15px rgba(0,0,0,0.4) !important;
                 width: 100% !important;
                 text-align: center !important;
                 display: block !important;
+                text-transform: uppercase;
             }
-            .actions li a.button:hover {
-                transform: translateY(-2px) !important;
-                filter: brightness(1.15) !important;
-            }
+            .actions li a.button:hover { transform: translateY(-3px) scale(1.02) !important; filter: brightness(1.2) !important; }
             .btn-youtube { background-color: #FF0000 !important; }
             .btn-tiktok { background-color: #111216 !important; border: 2px solid #00f2fe !important; color: #fff !important; }
             .btn-facebook { background-color: #1877F2 !important; }
             .btn-instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important; }
             .btn-itch { background-color: #fa5c5c !important; }
             .btn-steam { background: linear-gradient(135deg, #1b2838 0%, #2a475e 100%) !important; border: 1px solid #66c0f4 !important; }
-            .btn-kickstarter { background-color: #05ce78 !important; color: #000 !important; font-weight: 800 !important; }
+            .btn-kickstarter { background-color: #05ce78 !important; color: #000 !important; }
             .btn-kofi { background-color: #ff5e5b !important; }
 
-            /* --- STUDIO MANIFESTO TEXT WITH SUBTLE NEON GLOW --- */
+            /* --- 3D FLOATING MANIFESTO --- */
             .studio-manifesto {
-                font-size: 1.15em !important;
+                font-size: 1.18em !important;
                 line-height: 1.8 !important;
                 color: #b0b4d0 !important;
-                background: rgba(255, 255, 255, 0.02);
-                padding: 1.8em;
+                background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);
+                padding: 2em;
                 border-left: 4px solid #fa5c5c;
-                border-radius: 0 8px 8px 0;
+                border-radius: 0 12px 12px 0;
                 margin-top: 1.5em !important;
                 margin-bottom: 2em !important;
-                box-shadow: -4px 0 15px rgba(250, 92, 92, 0.25); /* Subtle ambient glow */
+                box-shadow: 0 15px 35px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05);
+                transition: transform 0.4s ease;
+            }
+            .studio-manifesto:hover {
+                transform: translateY(-4px); /* Subtle float effect */
             }
             .studio-manifesto strong { color: #fff !important; }
 
             /* --- TIGHTENED PROJECT SPACING & 3D HOVER PHYSICS --- */
-            .projects-section-title {
-                margin-top: 2.2em !important;
-                margin-bottom: 0.6em !important; /* Shrunk gap so tiles sit close to heading! */
-            }
-            section.tiles {
-                margin-top: 0 !important;
-                padding-top: 0 !important;
-            }
+            .projects-section-title { margin-top: 2.2em !important; margin-bottom: 0.6em !important; }
+            section.tiles { margin-top: 0 !important; padding-top: 0 !important; }
             .tiles article {
                 border-radius: 8px !important;
                 overflow: hidden !important;
                 transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
-                box-shadow: 0 8px 20px rgba(0,0,0,0.5) !important;
+                box-shadow: 0 8px 20px rgba(0,0,0,0.6) !important;
             }
-            /* The 3D Tactile Hover Lift! */
             .tiles article:hover {
                 transform: translateY(-8px) scale(1.02) !important;
-                box-shadow: 0 20px 40px rgba(0,0,0,0.8), 0 0 25px rgba(250, 92, 92, 0.25) !important;
+                box-shadow: 0 20px 40px rgba(0,0,0,0.9), 0 0 25px rgba(250, 92, 92, 0.3) !important;
                 border-color: rgba(250, 92, 92, 0.6) !important;
                 z-index: 10;
             }
-            .tiles article > .image:before,
-            .tiles article > .image:after {
-                display: none !important;
-                content: none !important;
-            }
-            .tiles article.clean-tile > .image img {
-                transition: transform 0.5s ease !important;
-            }
-            .tiles article.clean-tile:hover > .image img {
-                transform: scale(1.06) !important;
-            }
-            .tiles article.black-tile {
-                background-color: #000000 !important;
-                border: 1px solid rgba(255, 255, 255, 0.15) !important;
-            }
+            .tiles article > .image:before, .tiles article > .image:after { display: none !important; content: none !important; }
+            .tiles article.clean-tile > .image img { transition: transform 0.5s ease !important; }
+            .tiles article.clean-tile:hover > .image img { transform: scale(1.06) !important; }
+            .tiles article.black-tile { background-color: #000000 !important; border: 1px solid rgba(255, 255, 255, 0.1) !important; }
             .tiles article.black-tile > .image { background-color: #000000 !important; }
             .tiles article.black-tile > .image img { opacity: 0 !important; }
-            .tiles article.black-tile h2,
-            .tiles article.black-tile p {
-                color: #ffffff !important;
-                text-shadow: 0 0 10px rgba(0,0,0,0.8);
-            }
+            .tiles article.black-tile h2, .tiles article.black-tile p { color: #ffffff !important; text-shadow: 0 0 10px rgba(0,0,0,0.8); }
 
-            /* --- INDESTRUCTIBLE DARK FOOTER OVERRIDES --- */
-            footer#footer {
-                padding: 3em 0 2em 0 !important;
-                border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
-                margin-top: 4em !important;
-                background: transparent !important;
-                color: #c8cbe2 !important;
+            /* --- NEW: "WHAT I AM TRYING TO ACCOMPLISH" VISION CARD --- */
+            .vision-section {
+                margin-top: 4em;
+                background: rgba(255, 255, 255, 0.015);
+                border: 1px solid rgba(255, 255, 255, 0.04);
+                border-top: 4px solid #00f2fe;
+                border-radius: 12px;
+                padding: 3em;
+                box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+                transition: transform 0.4s ease;
             }
-            .email-contact-box {
-                background: rgba(255, 255, 255, 0.02) !important;
-                border: 1px solid rgba(255, 255, 255, 0.05) !important;
-                border-left: 4px solid #00f2fe !important;
-                padding: 1.5em 2em;
-                border-radius: 4px 8px 8px 4px;
-                display: inline-block;
-                margin-bottom: 2em;
-                color: #c8cbe2 !important;
-            }
-            .email-contact-box h3 {
+            .vision-section:hover { transform: translateY(-3px); }
+            .vision-section h3 {
+                font-size: 1.4em !important;
+                font-weight: 900 !important;
                 color: #fff !important;
-                margin-bottom: 0.3em !important;
-                font-size: 1.2em !important;
-                text-transform: uppercase;
                 letter-spacing: 0.1em;
+                text-transform: uppercase;
+                margin-bottom: 0.4em !important;
             }
+            .vision-section p { font-size: 1.15em !important; line-height: 1.8 !important; color: #b0b4d0 !important; margin-bottom: 1.5em !important; }
+            .vision-section p:last-child { margin-bottom: 0 !important; }
+            .vision-section ul { list-style-type: none; padding-left: 0; margin-bottom: 1.5em; }
+            .vision-section ul li {
+                font-size: 1.1em;
+                line-height: 1.8;
+                color: #c8cbe2;
+                margin-bottom: 0.8em;
+                padding-left: 1.8em;
+                position: relative;
+            }
+            .vision-section ul li:before {
+                content: "▸";
+                color: #fa5c5c;
+                position: absolute;
+                left: 0;
+                top: 0;
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+            .vision-section strong { color: #fff !important; }
+
+            /* --- INDESTRUCTIBLE DARK FOOTER --- */
+            footer#footer { padding: 3em 0 2em 0 !important; border-top: 1px solid rgba(255, 255, 255, 0.05) !important; margin-top: 4em !important; background: transparent !important; color: #c8cbe2 !important; }
+            .email-contact-box { background: rgba(255, 255, 255, 0.02) !important; border: 1px solid rgba(255, 255, 255, 0.05) !important; border-left: 4px solid #00f2fe !important; padding: 1.5em 2em; border-radius: 4px 8px 8px 4px; display: inline-block; margin-bottom: 2em; color: #c8cbe2 !important; }
+            .email-contact-box h3 { color: #fff !important; margin-bottom: 0.3em !important; font-size: 1.2em !important; text-transform: uppercase; letter-spacing: 0.1em; }
             .email-contact-box p { margin: 0 !important; font-size: 1.1em; color: #b0b4d0 !important; }
             .email-contact-box a { color: #00f2fe !important; font-weight: 700; text-decoration: none; }
             .email-contact-box a:hover { text-decoration: underline; }
 
+            /* --- AMBIENT MUSIC PLAYER (GLASSMORPHISM PILL) --- */
+            .ambient-player {
+                position: fixed;
+                bottom: 30px;
+                right: 30px;
+                background: rgba(13, 14, 18, 0.7);
+                backdrop-filter: blur(15px);
+                -webkit-backdrop-filter: blur(15px);
+                border: 1px solid rgba(0, 242, 254, 0.4);
+                padding: 12px 24px;
+                border-radius: 50px;
+                color: #00f2fe;
+                font-weight: 800;
+                font-size: 0.9em;
+                letter-spacing: 0.1em;
+                cursor: pointer;
+                z-index: 10000;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 15px rgba(0, 242, 254, 0.15);
+                transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            }
+            .ambient-player:hover {
+                transform: translateY(-5px) scale(1.05);
+                box-shadow: 0 15px 35px rgba(0,0,0,0.7), 0 0 25px rgba(0, 242, 254, 0.4);
+                background: rgba(0, 242, 254, 0.1);
+            }
+            .ambient-player.is-playing {
+                border-color: #fa5c5c;
+                color: #fa5c5c;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 20px rgba(250, 92, 92, 0.3);
+            }
+            .ambient-player.is-playing:hover {
+                background: rgba(250, 92, 92, 0.1);
+                box-shadow: 0 15px 35px rgba(0,0,0,0.7), 0 0 30px rgba(250, 92, 92, 0.5);
+            }
+
             /* --- RESPONSIVE MOBILE COLLAPSE --- */
             @media (max-width: 980px) {
-                .studio-grid-layout {
-                    grid-template-columns: 1fr;
-                    gap: 30px;
-                }
+                .logo .symbol img { height: 90px !important; width: 90px !important; }
+                .logo .title { font-size: 2.2em !important; }
+                .studio-grid-layout { grid-template-columns: 1fr; gap: 30px; }
                 .studio-sidebar { order: 2; }
                 .studio-main-content { order: 1; }
                 .actions { flex-direction: row; flex-wrap: wrap; }
                 .actions li { width: calc(50% - 5px); }
+                .ambient-player { bottom: 20px; right: 20px; font-size: 0.8em; padding: 10px 18px; }
             }
             @media (max-width: 600px) {
-                .banner-action-btn { font-size: 0.72em; padding: 0.45em 0.8em; }
+                .logo .symbol img { height: 70px !important; width: 70px !important; margin-right: 15px !important; }
+                .logo .title { font-size: 1.8em !important; }
+                .banner-action-btn { display: none; /* Hides large button on tiny phones to save space */ }
                 .actions li { width: 100%; }
+                .vision-section { padding: 1.5em; }
             }
         </style>
     </head>
@@ -289,7 +324,6 @@
                                 <span class="title">DARK SLUG GAMES</span>
                             </a>
                             
-                            <!-- Right Banner Action Button & Hamburger Menu -->
                             <div class="header-right-controls">
                                 <a href="generic.html" class="banner-action-btn">Who is DARK SLUG GAMES?</a>
                                 <nav>
@@ -314,13 +348,10 @@
                     <div id="main">
                         <div class="inner">
                             
-                            <!-- TWO-COLUMN DASHBOARD GRID -->
                             <div class="studio-grid-layout">
                                 
                                 <!-- LEFT COLUMN: BUTTON ECOSYSTEM -->
                                 <aside class="studio-sidebar">
-                                    
-                                    <!-- SOCIAL MEDIA SECTION -->
                                     <h3 class="custom-section-title">Social Media</h3>
                                     <ul class="actions">
                                         <li><a href="https://www.youtube.com/@DarkSlugGames" target="_blank" class="button btn-youtube icon brands fa-youtube">YouTube</a></li>
@@ -329,23 +360,20 @@
                                         <li><a href="https://www.instagram.com/darksluggames/" target="_blank" class="button btn-instagram icon brands fa-instagram">Instagram</a></li>
                                     </ul>
 
-                                    <!-- DEVELOPER PORTALS SECTION -->
                                     <h3 class="custom-section-title">Developer Portals</h3>
                                     <ul class="actions">
                                         <li><a href="https://darksluggames.itch.io" target="_blank" class="button btn-itch icon brands fa-itch-io">itch.io</a></li>
                                         <li><a href="https://store.steampowered.com/" target="_blank" class="button btn-steam icon brands fa-steam">Steam Page</a></li>
                                     </ul>
 
-                                    <!-- SUPPORT THE SLUGS SECTION -->
                                     <h3 class="custom-section-title">Support the Slugs</h3>
                                     <ul class="actions">
                                         <li><a href="https://www.kickstarter.com/profile/153536997" target="_blank" class="button btn-kickstarter icon solid fa-rocket">Kickstarter</a></li>
                                         <li><a href="https://ko-fi.com/darksluggames#galleryItemView" target="_blank" class="button btn-kofi icon solid fa-coffee">Ko-fi Tip Jar</a></li>
                                     </ul>
-
                                 </aside>
 
-                                <!-- RIGHT COLUMN: MANIFESTO & PROJECTS LIBRARY -->
+                                <!-- RIGHT COLUMN: MANIFESTO, PROJECTS, & VISION -->
                                 <main class="studio-main-content">
                                     
                                     <header>
@@ -357,11 +385,10 @@
                                         </div>
                                     </header>
 
-                                    <!-- PROJECTS LIBRARY SECTION (Shrunk gap & 3D Cards!) -->
+                                    <!-- PROJECTS LIBRARY SECTION -->
                                     <h3 class="custom-section-title projects-section-title">Projects Library</h3>
                                     <section class="tiles">
                                         
-                                        <!-- PROJECT 1: IT SPEAKS -->
                                         <article class="style1 clean-tile">
                                             <span class="image">
                                                 <img src="coverart.jpg" onerror="this.onerror=null; this.src='images/coverart.jpg'; this.onerror=function(){this.onerror=null; this.src='coverart.png';};" alt="IT SPEAKS Cover Art" />
@@ -373,32 +400,41 @@
                                             </a>
                                         </article>
 
-                                        <!-- PROJECT 2: COMING SOON -->
                                         <article class="style2 black-tile">
-                                            <span class="image">
-                                                <img src="images/pic02.jpg" alt="Coming Soon" />
-                                            </span>
+                                            <span class="image"><img src="images/pic02.jpg" alt="Coming Soon" /></span>
                                             <a href="generic.html">
                                                 <h2>COMING SOON</h2>
-                                                <div class="content">
-                                                    <p>A new nightmare is currently in development in the shadows.</p>
-                                                </div>
+                                                <div class="content"><p>A new nightmare is currently in development in the shadows.</p></div>
                                             </a>
                                         </article>
 
-                                        <!-- PROJECT 3: CLASSIFIED -->
                                         <article class="style3 black-tile">
-                                            <span class="image">
-                                                <img src="images/pic03.jpg" alt="Coming Soon" />
-                                            </span>
+                                            <span class="image"><img src="images/pic03.jpg" alt="Coming Soon" /></span>
                                             <a href="generic.html">
                                                 <h2>CLASSIFIED</h2>
-                                                <div class="content">
-                                                    <p>Experimental project. Stay tuned for future studio announcements.</p>
-                                                </div>
+                                                <div class="content"><p>Experimental project. Stay tuned for future studio announcements.</p></div>
                                             </a>
-                                </article>
+                                        </article>
 
+                                    </section>
+
+                                    <!-- VISION SECTION (Corrected "SeaMan") -->
+                                    <section class="vision-section">
+                                        <h3 class="custom-section-title" style="margin-top: 0 !important; border-bottom: none !important;">What I Am Trying to Accomplish</h3>
+                                        <p style="font-size: 1.15em !important; color: #00f2fe !important; font-weight: 700; margin-top: -0.5em; margin-bottom: 1.5em !important;">Reclaiming the Groundbreaking DNA of Classic Gaming</p>
+                                        
+                                        <p>Modern gaming has increasingly shifted toward a digital blob of cloned ideas and genre-chasing cash grabs. I started Dark Slug Games to actively push back against that trend. My goal is to breathe new life into the medium by building upon the foundational elements that made us fall in love with video games in the first place—an era when every title had a distinct visual identity, unforgettable atmosphere, daring gameplay mechanics, and box art you could still see if you closed your eyes twenty years later.</p>
+                                        
+                                        <p><strong>Our Legendary Inspirations:</strong><br />
+                                        The creative DNA of this studio is rooted in the bold, experimental spirit of late-90s and 2000s gaming. I am deeply inspired by unforgettable classics that took massive creative risks:</p>
+                                        
+                                        <ul>
+                                            <li><strong>Experimental & Psychological Dread:</strong> The bizarre, voice-controlled virtual biology of <em>SeaMan</em> on the Sega Dreamcast, alongside the deeply unsettling atmospheres of <em>Silent Hill</em>, <em>Rule of Rose</em>, and <em>Manhunt</em>.</li>
+                                            <li><strong>Genre-Defining Action & Tension:</strong> The tight, revolutionary design of <em>Resident Evil 4</em>, <em>Metroid</em> on the GameCube, <em>Metal Gear</em>, and the tactical perfection of <em>Splinter Cell: Chaos Theory</em>.</li>
+                                            <li><strong>Pure Iconic Personality:</strong> The timeless, unforgettable character and art direction of <em>Shadow of the Colossus</em>, <em>TimeSplitters 2</em>, <em>Tony Hawk's Underground</em>, <em>Rayman</em>, and <em>Soulcalibur</em>.</li>
+                                        </ul>
+
+                                        <p>We aren't interested in making cheap retro nostalgia clones; we are taking those groundbreaking philosophies and modernizing them. Dark Slug Games focuses primarily on atmospheric survival horror and experimental action-adventure experiences. Whether it is using adaptive microphone mechanics in <em>It Speaks</em> to echo the weirdness of <em>SeaMan</em>, or building grounded, terrifying environments where every threat serves the narrative, my promise is simple: I want to give players that exact same jaw-dropping feeling I had when I booted up my favorite classic consoles for the very first time.</p>
                                     </section>
 
                                 </main>
@@ -424,12 +460,45 @@
 
             </div>
 
+        <!-- HIDDEN AUDIO ELEMENT & FLOATING PLAYER CONTROLS -->
+        <audio id="ambient-audio" loop>
+            <source src="ambient.mp3" type="audio/mpeg">
+        </audio>
+        <div id="ambient-toggle" class="ambient-player">
+            <span class="ambient-icon">▶</span>
+            <span class="ambient-text">PLAY AMBIENT AUDIO</span>
+        </div>
+
         <!-- Scripts -->
             <script src="assets/js/jquery.min.js"></script>
             <script src="assets/js/browser.min.js"></script>
             <script src="assets/js/breakpoints.min.js"></script>
             <script src="assets/js/util.js"></script>
             <script src="assets/js/main.js"></script>
+            
+            <!-- Custom Ambient Audio Toggle Script -->
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    var audio = document.getElementById("ambient-audio");
+                    var toggleBtn = document.getElementById("ambient-toggle");
+                    var toggleText = toggleBtn.querySelector(".ambient-text");
+                    var toggleIcon = toggleBtn.querySelector(".ambient-icon");
+
+                    toggleBtn.addEventListener("click", function() {
+                        if (audio.paused) {
+                            audio.play();
+                            toggleBtn.classList.add("is-playing");
+                            toggleIcon.innerHTML = "❚❚";
+                            toggleText.innerHTML = "PAUSE AMBIENT AUDIO";
+                        } else {
+                            audio.pause();
+                            toggleBtn.classList.remove("is-playing");
+                            toggleIcon.innerHTML = "▶";
+                            toggleText.innerHTML = "PLAY AMBIENT AUDIO";
+                        }
+                    });
+                });
+            </script>
 
     </body>
 </html>
