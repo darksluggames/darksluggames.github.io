@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <!--
-    Phantom by HTML5 UP (Modified: Dark Slug Games Executive Edition)
+    Phantom by HTML5 UP (Modified: Dark Slug Games Executive Two-Column Edition)
     html5up.net | @ajlkn | Free under CCA 3.0 license
 -->
 <html>
@@ -17,12 +17,29 @@
                 color: #c8cbe2 !important;
             }
 
-            /* --- MASSIVE HEADER & LOGO OVERRIDES (Indestructible Sizing!) --- */
+            /* --- SLEEK HEADER BANNER & LOGO OVERRIDES --- */
             header#header {
-                padding-top: 2em !important;
-                padding-bottom: 2em !important;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                padding: 1.2em 0 !important;
+                background: rgba(13, 14, 18, 0.95) !important;
+                border-bottom: 2px solid rgba(255, 255, 255, 0.08) !important;
+                box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6) !important;
             }
+            #header .inner {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                position: relative !important;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+            /* Override HTML5 UP Absolute Nav Positioning */
+            #header nav {
+                position: static !important;
+                right: auto !important;
+                top: auto !important;
+            }
+            #header nav ul { margin: 0 !important; }
+            
             .logo {
                 display: flex !important;
                 align-items: center !important;
@@ -31,21 +48,21 @@
             .logo .symbol {
                 background: transparent !important;
                 padding: 0 !important;
-                margin-right: 20px !important; /* Clean positive space, zero overlap! */
+                margin-right: 20px !important;
                 border: none !important;
                 display: flex !important;
                 align-items: center !important;
             }
             .logo .symbol img {
-                height: 90px !important; /* Explicit 90px height forces it large everywhere */
-                width: 90px !important;  /* Locks square aspect ratio */
+                height: 80px !important;
+                width: 80px !important;
                 max-height: none !important;
                 max-width: none !important;
                 display: block !important;
                 object-fit: contain !important;
             }
             .logo .title {
-                font-size: 2.6em !important;
+                font-size: 2.4em !important;
                 font-weight: 900 !important;
                 letter-spacing: 0.18em !important;
                 color: #ffffff !important;
@@ -53,11 +70,53 @@
                 line-height: 1.1 !important;
             }
 
+            /* Right-Hand Banner Controls */
+            .header-right-controls {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+            .banner-action-btn {
+                background: rgba(250, 92, 92, 0.15);
+                border: 1px solid #fa5c5c;
+                color: #ffffff !important;
+                padding: 0.55em 1.2em;
+                border-radius: 4px;
+                font-weight: 700;
+                font-size: 0.85em;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                text-decoration: none !important;
+                transition: all 0.2s ease;
+                white-space: nowrap;
+            }
+            .banner-action-btn:hover {
+                background: #fa5c5c;
+                box-shadow: 0 0 15px rgba(250, 92, 92, 0.5);
+                transform: translateY(-2px);
+            }
+
+            /* --- TWO-COLUMN STUDIO DASHBOARD GRID --- */
+            .studio-grid-layout {
+                display: grid;
+                grid-template-columns: 300px 1fr;
+                gap: 50px;
+                align-items: start;
+                margin-top: 1.5em;
+            }
+            .studio-sidebar {
+                background: rgba(255, 255, 255, 0.015);
+                border: 1px solid rgba(255, 255, 255, 0.05);
+                padding: 1.8em;
+                border-radius: 8px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            }
+            
             /* --- CLEAN SECTION DIVIDERS --- */
             .custom-section-title {
-                margin-top: 2.5em !important;
+                margin-top: 2em !important;
                 margin-bottom: 1em !important;
-                font-size: 1.1em !important;
+                font-size: 1.05em !important;
                 font-weight: 800 !important;
                 letter-spacing: 0.15em !important;
                 text-transform: uppercase;
@@ -67,11 +126,19 @@
                 display: block;
                 width: 100%;
             }
+            .studio-sidebar .custom-section-title:first-child {
+                margin-top: 0 !important;
+            }
             .actions {
-                margin-bottom: 2em !important;
+                margin-bottom: 1.5em !important;
                 display: flex;
-                flex-wrap: wrap;
-                gap: 12px;
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+            }
+            .actions li {
+                width: 100%;
+                padding-left: 0 !important;
             }
 
             /* --- TRUE-COLOR BRAND BUTTONS --- */
@@ -83,9 +150,12 @@
                 border: none !important;
                 color: #fff !important;
                 box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
+                width: 100% !important;
+                text-align: center !important;
+                display: block !important;
             }
             .actions li a.button:hover {
-                transform: translateY(-3px) !important;
+                transform: translateY(-2px) !important;
                 filter: brightness(1.15) !important;
             }
             .btn-youtube { background-color: #FF0000 !important; }
@@ -102,7 +172,6 @@
                 font-size: 1.15em !important;
                 line-height: 1.8 !important;
                 color: #b0b4d0 !important;
-                max-width: 900px;
                 background: rgba(255, 255, 255, 0.02);
                 padding: 1.8em;
                 border-left: 4px solid #fa5c5c;
@@ -124,8 +193,6 @@
             .tiles article.clean-tile:hover > .image img {
                 transform: scale(1.08) !important;
             }
-            
-            /* Pure Black Styling for Coming Soon & Classified Tiles */
             .tiles article.black-tile {
                 background-color: #000000 !important;
                 border: 1px solid rgba(255, 255, 255, 0.15) !important;
@@ -134,12 +201,8 @@
             .tiles article.black-tile:hover {
                 border-color: #fa5c5c !important;
             }
-            .tiles article.black-tile > .image {
-                background-color: #000000 !important;
-            }
-            .tiles article.black-tile > .image img {
-                opacity: 0 !important;
-            }
+            .tiles article.black-tile > .image { background-color: #000000 !important; }
+            .tiles article.black-tile > .image img { opacity: 0 !important; }
             .tiles article.black-tile h2,
             .tiles article.black-tile p {
                 color: #ffffff !important;
@@ -171,18 +234,36 @@
                 text-transform: uppercase;
                 letter-spacing: 0.1em;
             }
-            .email-contact-box p {
-                margin: 0 !important;
-                font-size: 1.1em;
-                color: #b0b4d0 !important;
+            .email-contact-box p { margin: 0 !important; font-size: 1.1em; color: #b0b4d0 !important; }
+            .email-contact-box a { color: #00f2fe !important; font-weight: 700; text-decoration: none; }
+            .email-contact-box a:hover { text-decoration: underline; }
+
+            /* --- RESPONSIVE MOBILE COLLAPSE --- */
+            @media (max-width: 980px) {
+                .studio-grid-layout {
+                    grid-template-columns: 1fr;
+                    gap: 30px;
+                }
+                .studio-sidebar {
+                    order: 2; /* On mobile, manifesto shows first, then buttons below! */
+                }
+                .studio-main-content {
+                    order: 1;
+                }
+                .actions {
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                }
+                .actions li {
+                    width: calc(50% - 5px); /* Two buttons per row on tablets/phones */
+                }
             }
-            .email-contact-box a {
-                color: #00f2fe !important;
-                font-weight: 700;
-                text-decoration: none;
-            }
-            .email-contact-box a:hover {
-                text-decoration: underline;
+            @media (max-width: 600px) {
+                .banner-action-btn {
+                    font-size: 0.72em;
+                    padding: 0.45em 0.8em;
+                }
+                .actions li { width: 100%; }
             }
         </style>
     </head>
@@ -190,109 +271,130 @@
         <!-- Wrapper -->
             <div id="wrapper">
 
-                <!-- Header -->
+                <!-- Sleek Top Banner -->
                     <header id="header">
                         <div class="inner">
                             <a href="index.html" class="logo">
                                 <span class="symbol"><img src="dsg-vec.png" onerror="this.onerror=null; this.src='dsg-vec.jpg'; this.onerror=function(){this.onerror=null; this.src='images/dsg-vec.png';};" alt="DSG Logo" /></span>
                                 <span class="title">DARK SLUG GAMES</span>
                             </a>
-                            <nav>
-                                <ul>
-                                    <li><a href="#menu">Menu</a></li>
-                                </ul>
-                            </nav>
+                            
+                            <!-- Right Banner Action Button & Hamburger Menu -->
+                            <div class="header-right-controls">
+                                <a href="generic.html" class="banner-action-btn">Who is DARK SLUG GAMES?</a>
+                                <nav>
+                                    <ul>
+                                        <li><a href="#menu">Menu</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
                         </div>
                     </header>
 
-                <!-- Menu -->
+                <!-- Clean Hamburger Menu (Removed "Who is DSG") -->
                     <nav id="menu">
                         <h2>Menu</h2>
                         <ul>
                             <li><a href="index.html">Home</a></li>
-                            <li><a href="generic.html">Who is DARK SLUG GAMES</a></li>                            
                             <li><a href="elements.html">Legal</a></li>
                         </ul>
                     </nav>
 
-                <!-- Main -->
+                <!-- Main Two-Column Content Area -->
                     <div id="main">
                         <div class="inner">
-                            <header>
-                                <h1 style="font-weight: 800; color: #fff; line-height: 1.3;">Games by a gamer for gamers.<br />
-                                <span style="font-size: 0.75em; color: #8f94b8; font-weight: 400;">An Independent Game Studio & Publisher.</span></h1>
+                            
+                            <!-- TWO-COLUMN DASHBOARD GRID -->
+                            <div class="studio-grid-layout">
                                 
-                                <div class="studio-manifesto">
-                                    Welcome to the official <strong>Dark Slug Games</strong> hub—a dedicated space for experimental, atmospheric, and boundary-pushing indie projects. Whether you're here to watch our latest trailers, explore current development builds, or connect across our developer ecosystems, we're glad you stepped into the shadows. We believe that no idea is too strange to explore, and the best gaming experiences come from raw, uncompromising creativity. Dive into our library below, follow our development journey, and let's keep making cool things together.
-                                </div>
-                            </header>
+                                <!-- LEFT COLUMN: BUTTON ECOSYSTEM (Your Red Box!) -->
+                                <aside class="studio-sidebar">
+                                    
+                                    <!-- SOCIAL MEDIA SECTION -->
+                                    <h3 class="custom-section-title">Social Media</h3>
+                                    <ul class="actions">
+                                        <li><a href="https://www.youtube.com/@DarkSlugGames" target="_blank" class="button btn-youtube icon brands fa-youtube">YouTube</a></li>
+                                        <li><a href="https://www.tiktok.com/@darksluggames" target="_blank" class="button btn-tiktok icon brands fa-tiktok">TikTok</a></li>
+                                        <li><a href="https://www.facebook.com/profile.php?id=61591896429550" target="_blank" class="button btn-facebook icon brands fa-facebook-f">Facebook</a></li>
+                                        <li><a href="https://www.instagram.com/darksluggames/" target="_blank" class="button btn-instagram icon brands fa-instagram">Instagram</a></li>
+                                    </ul>
 
-                            <!-- SOCIAL MEDIA SECTION -->
-                            <h3 class="custom-section-title">Social Media</h3>
-                            <ul class="actions">
-                                <li><a href="https://www.youtube.com/@DarkSlugGames" target="_blank" class="button btn-youtube icon brands fa-youtube">YouTube</a></li>
-                                <li><a href="https://www.tiktok.com/@darksluggames" target="_blank" class="button btn-tiktok icon brands fa-tiktok">TikTok</a></li>
-                                <li><a href="https://www.facebook.com/profile.php?id=61591896429550" target="_blank" class="button btn-facebook icon brands fa-facebook-f">Facebook</a></li>
-                                <li><a href="https://www.instagram.com/darksluggames/" target="_blank" class="button btn-instagram icon brands fa-instagram">Instagram</a></li>
-                            </ul>
+                                    <!-- DEVELOPER PORTALS SECTION -->
+                                    <h3 class="custom-section-title">Developer Portals</h3>
+                                    <ul class="actions">
+                                        <li><a href="https://darksluggames.itch.io" target="_blank" class="button btn-itch icon brands fa-itch-io">itch.io</a></li>
+                                        <li><a href="https://store.steampowered.com/" target="_blank" class="button btn-steam icon brands fa-steam">Steam Page</a></li>
+                                    </ul>
 
-                            <!-- DEVELOPER PORTALS SECTION -->
-                            <h3 class="custom-section-title">Developer Portals</h3>
-                            <ul class="actions">
-                                <li><a href="https://darksluggames.itch.io" target="_blank" class="button btn-itch icon brands fa-itch-io">itch.io</a></li>
-                                <li><a href="https://store.steampowered.com/" target="_blank" class="button btn-steam icon brands fa-steam">Steam Page</a></li>
-                            </ul>
+                                    <!-- SUPPORT THE SLUGS SECTION -->
+                                    <h3 class="custom-section-title">Support the Slugs</h3>
+                                    <ul class="actions">
+                                        <li><a href="https://www.kickstarter.com/profile/153536997" target="_blank" class="button btn-kickstarter icon solid fa-rocket">Kickstarter</a></li>
+                                        <li><a href="https://ko-fi.com/darksluggames#galleryItemView" target="_blank" class="button btn-kofi icon solid fa-coffee">Ko-fi Tip Jar</a></li>
+                                    </ul>
 
-                            <!-- SUPPORT THE SHADOWS SECTION -->
-                            <h3 class="custom-section-title">Support the Shadows</h3>
-                            <ul class="actions">
-                                <li><a href="https://www.kickstarter.com/profile/153536997" target="_blank" class="button btn-kickstarter icon solid fa-rocket">Kickstarter</a></li>
-                                <li><a href="https://ko-fi.com/darksluggames#galleryItemView" target="_blank" class="button btn-kofi icon solid fa-coffee">Ko-fi Tip Jar</a></li>
-                            </ul>
+                                </aside>
 
-                            <!-- PROJECTS LIBRARY SECTION -->
-                            <h3 class="custom-section-title" style="margin-top: 3.5em !important;">Projects Library</h3>
-                            <section class="tiles">
-                                
-                                <!-- PROJECT 1: IT SPEAKS -->
-                                <article class="style1 clean-tile">
-                                    <span class="image">
-                                        <img src="coverart.jpg" onerror="this.onerror=null; this.src='images/coverart.jpg'; this.onerror=function(){this.onerror=null; this.src='coverart.png';};" alt="IT SPEAKS Cover Art" />
-                                    </span>
-                                    <a href="https://darksluggames.itch.io/it-speaks" target="_blank">
-                                        <div class="content">
-                                            <p style="background: rgba(0,0,0,0.8); padding: 10px; border-radius: 4px;">Your virtual pet questions the nature of reality. Talk into your mic and try to keep it alive.</p>
+                                <!-- RIGHT COLUMN: MANIFESTO & PROJECTS LIBRARY -->
+                                <main class="studio-main-content">
+                                    
+                                    <header>
+                                        <!-- Corrected Text, Comma, Period removal, and matching pure white color (#ffffff) -->
+                                        <h1 style="font-weight: 800; color: #fff; line-height: 1.3;">Games by a gamer, for gamers.<br />
+                                        <span style="font-size: 0.75em; color: #ffffff; font-weight: 400;">An Independent Game Studio & Publisher</span></h1>
+                                        
+                                        <div class="studio-manifesto">
+                                            Welcome to the official <strong>Dark Slug Games</strong> hub—a dedicated space for experimental, atmospheric, and boundary-pushing indie projects. Whether you're here to watch our latest trailers, explore current development builds, or connect across our developer ecosystems, we're glad you stepped into the shadows. We believe that no idea is too strange to explore, and the best gaming experiences come from raw, uncompromising creativity. Dive into our library below, follow our development journey, and let's keep making cool things together.
                                         </div>
-                                    </a>
-                                </article>
+                                    </header>
 
-                                <!-- PROJECT 2: COMING SOON -->
-                                <article class="style2 black-tile">
-                                    <span class="image">
-                                        <img src="images/pic02.jpg" alt="Coming Soon" />
-                                    </span>
-                                    <a href="generic.html">
-                                        <h2>COMING SOON</h2>
-                                        <div class="content">
-                                            <p>A new nightmare is currently in development in the shadows.</p>
-                                        </div>
-                                    </a>
-                                </article>
+                                    <!-- PROJECTS LIBRARY SECTION -->
+                                    <h3 class="custom-section-title" style="margin-top: 2.5em !important;">Projects Library</h3>
+                                    <section class="tiles">
+                                        
+                                        <!-- PROJECT 1: IT SPEAKS -->
+                                        <article class="style1 clean-tile">
+                                            <span class="image">
+                                                <img src="coverart.jpg" onerror="this.onerror=null; this.src='images/coverart.jpg'; this.onerror=function(){this.onerror=null; this.src='coverart.png';};" alt="IT SPEAKS Cover Art" />
+                                            </span>
+                                            <a href="https://darksluggames.itch.io/it-speaks" target="_blank">
+                                                <div class="content">
+                                                    <p style="background: rgba(0,0,0,0.8); padding: 10px; border-radius: 4px;">Your virtual pet questions the nature of reality. Talk into your mic and try to keep it alive.</p>
+                                                </div>
+                                            </a>
+                                        </article>
 
-                                <!-- PROJECT 3: CLASSIFIED -->
-                                <article class="style3 black-tile">
-                                    <span class="image">
-                                        <img src="images/pic03.jpg" alt="Coming Soon" />
-                                    </span>
-                                    <a href="generic.html">
-                                        <h2>CLASSIFIED</h2>
-                                        <div class="content">
-                                            <p>Experimental project. Stay tuned for future studio announcements.</p>
-                                        </div>
-                                    </a>
-                                </article>
+                                        <!-- PROJECT 2: COMING SOON -->
+                                        <article class="style2 black-tile">
+                                            <span class="image">
+                                                <img src="images/pic02.jpg" alt="Coming Soon" />
+                                            </span>
+                                            <a href="generic.html">
+                                                <h2>COMING SOON</h2>
+                                                <div class="content">
+                                                    <p>A new nightmare is currently in development in the shadows.</p>
+                                                </div>
+                                            </a>
+                                        </article>
 
-                            </section>
+                                        <!-- PROJECT 3: CLASSIFIED -->
+                                        <article class="style3 black-tile">
+                                            <span class="image">
+                                                <img src="images/pic03.jpg" alt="Coming Soon" />
+                                            </span>
+                                            <a href="generic.html">
+                                                <h2>CLASSIFIED</h2>
+                                                <div class="content">
+                                                    <p>Experimental project. Stay tuned for future studio announcements.</p>
+                                                </div>
+                                            </a>
+                                        </article>
+
+                                    </section>
+
+                                </main>
+
+                            </div>
 
                         </div>
                     </div>
