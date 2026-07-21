@@ -100,9 +100,14 @@
                 transform: translateY(-2px);
             }
 
-            /* --- TWO-COLUMN STUDIO DASHBOARD GRID --- */
+            /* --- EXPLICIT ROW-TARGETED GRID LAYOUT --- */
             .studio-grid-layout { display: grid; grid-template-columns: 280px 1fr; gap: 60px; align-items: start; margin-top: 1.5em; }
-            .studio-sidebar { background: rgba(255, 255, 255, 0.015); border: 1px solid rgba(255, 255, 255, 0.04); padding: 1.8em; border-radius: 12px; box-shadow: 0 15px 40px rgba(0,0,0,0.4); backdrop-filter: blur(5px); }
+            
+            /* Sidebar spans 2 rows so the layout holds firmly together */
+            .studio-sidebar { grid-column: 1; grid-row: 1 / span 2; background: rgba(255, 255, 255, 0.015); border: 1px solid rgba(255, 255, 255, 0.04); padding: 1.8em; border-radius: 12px; box-shadow: 0 15px 40px rgba(0,0,0,0.4); backdrop-filter: blur(5px); }
+            
+            /* Main content occupies Row 1, Column 2 */
+            .studio-main-content { grid-column: 2; grid-row: 1; }
             
             .custom-section-title { margin-top: 2em !important; margin-bottom: 1em !important; font-size: 1.05em !important; font-weight: 800 !important; letter-spacing: 0.15em !important; text-transform: uppercase; color: #fff !important; border-bottom: 2px solid rgba(255, 255, 255, 0.08); padding-bottom: 0.4em; display: block; width: 100%; }
             .studio-sidebar .custom-section-title:first-child { margin-top: 0 !important; }
@@ -138,8 +143,8 @@
             .tiles article.black-tile > .image img { opacity: 0 !important; }
             .tiles article.black-tile h2, .tiles article.black-tile p { color: #ffffff !important; text-shadow: 0 0 10px rgba(0,0,0,0.8); }
 
-            /* --- VISION CARD --- */
-            .vision-section { margin-top: 4em; background: rgba(255, 255, 255, 0.015); border: 1px solid rgba(255, 255, 255, 0.04); border-top: 4px solid #00f2fe; border-radius: 12px; padding: 3em; box-shadow: 0 20px 50px rgba(0,0,0,0.5); transition: transform 0.4s ease; }
+            /* --- VISION CARD (Separated out into Grid Row 2) --- */
+            .vision-section { grid-column: 2; grid-row: 2; margin-top: 1em; background: rgba(255, 255, 255, 0.015); border: 1px solid rgba(255, 255, 255, 0.04); border-top: 4px solid #00f2fe; border-radius: 12px; padding: 3em; box-shadow: 0 20px 50px rgba(0,0,0,0.5); transition: transform 0.4s ease; }
             .vision-section:hover { transform: translateY(-3px); }
             .vision-section h3 { font-size: 1.4em !important; font-weight: 900 !important; color: #fff !important; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.4em !important; }
             .vision-section p { font-size: 1.15em !important; line-height: 1.8 !important; color: #b0b4d0 !important; margin-bottom: 1.5em !important; }
@@ -189,7 +194,6 @@
             }
             .ambient-toggle-btn:hover { background: #00f2fe; color: #000; box-shadow: 0 0 15px rgba(0, 242, 254, 0.6); }
             
-            /* Custom Volume Slider Styling */
             .ambient-volume-container { display: flex; align-items: center; gap: 8px; }
             .vol-icon { font-size: 1.1em; }
             #ambient-volume {
@@ -198,18 +202,13 @@
                 background: transparent;
                 cursor: pointer;
             }
-            #ambient-volume::-webkit-slider-runnable-track {
-                height: 4px; background: rgba(0, 242, 254, 0.3); border-radius: 2px; transition: background 0.3s ease;
-            }
+            #ambient-volume::-webkit-slider-runnable-track { height: 4px; background: rgba(0, 242, 254, 0.3); border-radius: 2px; transition: background 0.3s ease; }
             #ambient-volume::-webkit-slider-thumb {
                 -webkit-appearance: none; height: 12px; width: 12px; border-radius: 50%;
                 background: #00f2fe; margin-top: -4px; box-shadow: 0 0 10px rgba(0, 242, 254, 0.8); transition: all 0.3s ease;
             }
             
-            /* Active "Playing" State Colors (Crimson) */
-            .ambient-player.is-playing {
-                border-color: #fa5c5c; color: #fa5c5c; box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 20px rgba(250, 92, 92, 0.3);
-            }
+            .ambient-player.is-playing { border-color: #fa5c5c; color: #fa5c5c; box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 20px rgba(250, 92, 92, 0.3); }
             .ambient-player.is-playing:hover { background: rgba(250, 92, 92, 0.05); box-shadow: 0 15px 35px rgba(0,0,0,0.7), 0 0 30px rgba(250, 92, 92, 0.5); }
             .ambient-player.is-playing .ambient-toggle-btn { background: rgba(250, 92, 92, 0.15); }
             .ambient-player.is-playing .ambient-toggle-btn:hover { background: #fa5c5c; color: #fff; box-shadow: 0 0 15px rgba(250, 92, 92, 0.6); }
@@ -224,13 +223,17 @@
             .email-contact-box a { color: #00f2fe !important; font-weight: 700; text-decoration: none; }
             .email-contact-box a:hover { text-decoration: underline; }
 
-            /* --- RESPONSIVE MOBILE COLLAPSE --- */
+            /* --- RESPONSIVE MOBILE COLLAPSE (The Grid Order Intercept!) --- */
             @media (max-width: 980px) {
                 .logo .symbol img { height: 90px !important; width: 90px !important; }
                 .logo .title { font-size: 2.2em !important; }
-                .studio-grid-layout { grid-template-columns: 1fr; gap: 30px; }
-                .studio-sidebar { order: 2; }
-                .studio-main-content { order: 1; }
+                
+                /* This explicitly orders the stack on Mobile! */
+                .studio-grid-layout { grid-template-columns: 1fr; gap: 40px; }
+                .studio-main-content { grid-column: 1; grid-row: 1; } /* Projects stack first */
+                .studio-sidebar { grid-column: 1; grid-row: 2; } /* Socials stack second */
+                .vision-section { grid-column: 1; grid-row: 3; margin-top: 0; } /* Vision stacks last */
+                
                 .actions { flex-direction: row; flex-wrap: wrap; }
                 .actions li { width: calc(50% - 5px); }
                 .ambient-player { bottom: 20px; right: 20px; font-size: 0.8em; padding: 8px 16px; }
@@ -242,7 +245,7 @@
                 .banner-action-btn { display: none; }
                 .actions li { width: 100%; }
                 .vision-section { padding: 1.5em; }
-                .ambient-text { display: none; } /* Hides text on mobile to save space */
+                .ambient-text { display: none; }
                 .ambient-player { gap: 10px; }
             }
         </style>
@@ -270,22 +273,23 @@
                         </div>
                     </header>
 
-                <!-- Clean Hamburger Menu -->
+                <!-- Restored Menu with 'Who is DSG' Link for Mobile Accessibility -->
                     <nav id="menu">
                         <h2>Menu</h2>
                         <ul>
                             <li><a href="index.html">Home</a></li>
+                            <li><a href="generic.html">Who is DARK SLUG GAMES</a></li>
                             <li><a href="elements.html">Legal</a></li>
                         </ul>
                     </nav>
 
-                <!-- Main Two-Column Content Area -->
+                <!-- Main Grid Content Area -->
                     <div id="main">
                         <div class="inner">
                             
                             <div class="studio-grid-layout">
                                 
-                                <!-- LEFT COLUMN: BUTTON ECOSYSTEM -->
+                                <!-- LEFT COLUMN: BUTTON ECOSYSTEM (Row 2 on Mobile) -->
                                 <aside class="studio-sidebar">
                                     <h3 class="custom-section-title">Social Media</h3>
                                     <ul class="actions">
@@ -308,7 +312,7 @@
                                     </ul>
                                 </aside>
 
-                                <!-- RIGHT COLUMN: MANIFESTO, PROJECTS, & VISION -->
+                                <!-- RIGHT COLUMN: MANIFESTO & PROJECTS (Row 1 on Mobile) -->
                                 <main class="studio-main-content">
                                     
                                     <header>
@@ -353,26 +357,26 @@
 
                                     </section>
 
-                                    <!-- VISION SECTION -->
-                                    <section class="vision-section">
-                                        <h3 class="custom-section-title" style="margin-top: 0 !important; border-bottom: none !important;">What I Am Trying to Accomplish</h3>
-                                        <p style="font-size: 1.15em !important; color: #00f2fe !important; font-weight: 700; margin-top: -0.5em; margin-bottom: 1.5em !important;">Reclaiming the Groundbreaking DNA of Classic Gaming</p>
-                                        
-                                        <p>Modern gaming has increasingly shifted toward a digital blob of cloned ideas and genre-chasing cash grabs. I started Dark Slug Games to actively push back against that trend. My goal is to breathe new life into the medium by building upon the foundational elements that made us fall in love with video games in the first place—an era when every title had a distinct visual identity, unforgettable atmosphere, daring gameplay mechanics, and box art you could still see if you closed your eyes twenty years later.</p>
-                                        
-                                        <p><strong>Our Legendary Inspirations:</strong><br />
-                                        The creative DNA of this studio is rooted in the bold, experimental spirit of late-90s and 2000s gaming. I am deeply inspired by unforgettable classics that took massive creative risks:</p>
-                                        
-                                        <ul>
-                                            <li><strong>Experimental & Psychological Dread:</strong> The bizarre, voice-controlled virtual biology of <em>SeaMan</em> on the Sega Dreamcast, alongside the deeply unsettling atmospheres of <em>Silent Hill</em>, <em>Rule of Rose</em>, and <em>Manhunt</em>.</li>
-                                            <li><strong>Genre-Defining Action & Tension:</strong> The tight, revolutionary design of <em>Resident Evil 4</em>, <em>Metroid</em> on the GameCube, <em>Metal Gear</em>, and the tactical perfection of <em>Splinter Cell: Chaos Theory</em>.</li>
-                                            <li><strong>Pure Iconic Personality:</strong> The timeless, unforgettable character and art direction of <em>Shadow of the Colossus</em>, <em>TimeSplitters 2</em>, <em>Tony Hawk's Underground</em>, <em>Rayman</em>, and <em>Soulcalibur</em>.</li>
-                                        </ul>
-
-                                        <p>We aren't interested in making cheap retro nostalgia clones; we are taking those groundbreaking philosophies and modernizing them. Dark Slug Games focuses primarily on atmospheric survival horror and experimental action-adventure experiences. Whether it is using adaptive microphone mechanics in <em>It Speaks</em> to echo the weirdness of <em>SeaMan</em>, or building grounded, terrifying environments where every threat serves the narrative, my promise is simple: I want to give players that exact same jaw-dropping feeling I had when I booted up my favorite classic consoles for the very first time.</p>
-                                    </section>
-
                                 </main>
+
+                                <!-- VISION SECTION (Row 3 on Mobile) -->
+                                <section class="vision-section">
+                                    <h3 class="custom-section-title" style="margin-top: 0 !important; border-bottom: none !important;">What I Am Trying to Accomplish</h3>
+                                    <p style="font-size: 1.15em !important; color: #00f2fe !important; font-weight: 700; margin-top: -0.5em; margin-bottom: 1.5em !important;">Reclaiming the Groundbreaking DNA of Classic Gaming</p>
+                                    
+                                    <p>Modern gaming has increasingly shifted toward a digital blob of cloned ideas and genre-chasing cash grabs. I started Dark Slug Games to actively push back against that trend. My goal is to breathe new life into the medium by building upon the foundational elements that made us fall in love with video games in the first place—an era when every title had a distinct visual identity, unforgettable atmosphere, daring gameplay mechanics, and box art you could still see if you closed your eyes twenty years later.</p>
+                                    
+                                    <p><strong>Our Legendary Inspirations:</strong><br />
+                                    The creative DNA of this studio is rooted in the bold, experimental spirit of late-90s and 2000s gaming. I am deeply inspired by unforgettable classics that took massive creative risks:</p>
+                                    
+                                    <ul>
+                                        <li><strong>Experimental & Psychological Dread:</strong> The bizarre, voice-controlled virtual biology of <em>SeaMan</em> on the Sega Dreamcast, alongside the deeply unsettling atmospheres of <em>Silent Hill</em>, <em>Rule of Rose</em>, and <em>Manhunt</em>.</li>
+                                        <li><strong>Genre-Defining Action & Tension:</strong> The tight, revolutionary design of <em>Resident Evil 4</em>, <em>Metroid</em> on the GameCube, <em>Metal Gear</em>, and the tactical perfection of <em>Splinter Cell: Chaos Theory</em>.</li>
+                                        <li><strong>Pure Iconic Personality:</strong> The timeless, unforgettable character and art direction of <em>Shadow of the Colossus</em>, <em>TimeSplitters 2</em>, <em>Tony Hawk's Underground</em>, <em>Rayman</em>, and <em>Soulcalibur</em>.</li>
+                                    </ul>
+
+                                    <p>We aren't interested in making cheap retro nostalgia clones; we are taking those groundbreaking philosophies and modernizing them. Dark Slug Games focuses primarily on atmospheric survival horror and experimental action-adventure experiences. Whether it is using adaptive microphone mechanics in <em>It Speaks</em> to echo the weirdness of <em>SeaMan</em>, or building grounded, terrifying environments where every threat serves the narrative, my promise is simple: I want to give players that exact same jaw-dropping feeling I had when I booted up my favorite classic consoles for the very first time.</p>
+                                </section>
 
                             </div>
 
@@ -396,12 +400,11 @@
             </div>
 
         <!-- HIDDEN AUDIO ELEMENT -->
-        <!-- Fixed Path: Correctly pointing to the 'assets' folder! -->
         <audio id="ambient-audio" loop>
             <source src="assets/ambient.mp3" type="audio/mpeg">
         </audio>
 
-        <!-- FLOATING PLAYER CONTROLS (With Volume Slider!) -->
+        <!-- FLOATING PLAYER CONTROLS -->
         <div id="ambient-player-container" class="ambient-player">
             <div id="ambient-toggle" class="ambient-toggle-btn">
                 <span class="ambient-icon" style="font-size: 1.1em; padding-left: 2px;">▶</span>
@@ -409,7 +412,6 @@
             
             <div class="ambient-volume-container">
                 <span class="vol-icon" style="font-size: 0.9em; opacity: 0.8;">🔉</span>
-                <!-- Custom Range Slider (Default volume 40%) -->
                 <input type="range" id="ambient-volume" min="0" max="1" step="0.01" value="0.4">
             </div>
             
@@ -433,27 +435,24 @@
                     var toggleIcon = toggleBtn.querySelector(".ambient-icon");
                     var volumeSlider = document.getElementById("ambient-volume");
 
-                    // Set initial volume from slider
                     audio.volume = volumeSlider.value;
 
-                    // Play/Pause Click Event
                     toggleBtn.addEventListener("click", function() {
                         if (audio.paused) {
                             audio.play();
                             container.classList.add("is-playing");
                             toggleIcon.innerHTML = "❚❚";
-                            toggleIcon.style.paddingLeft = "0"; // centers pause bars
+                            toggleIcon.style.paddingLeft = "0"; 
                             toggleText.innerHTML = "NOW PLAYING";
                         } else {
                             audio.pause();
                             container.classList.remove("is-playing");
                             toggleIcon.innerHTML = "▶";
-                            toggleIcon.style.paddingLeft = "2px"; // centers play triangle
+                            toggleIcon.style.paddingLeft = "2px"; 
                             toggleText.innerHTML = "AMBIENT AUDIO";
                         }
                     });
 
-                    // Volume Slider Drag Event
                     volumeSlider.addEventListener("input", function() {
                         audio.volume = this.value;
                     });
