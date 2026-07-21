@@ -31,14 +31,10 @@
             #header .inner {
                 display: flex !important;
                 align-items: center !important;
-                justify-content: space-between !important;
-                position: relative !important;
                 flex-wrap: wrap;
-                gap: 15px;
+                gap: 20px;
                 max-width: 1400px !important;
             }
-            #header nav { position: static !important; right: auto !important; top: auto !important; }
-            #header nav ul { margin: 0 !important; }
             
             /* --- MASSIVE 3D INTERACTIVE LOGO --- */
             .logo {
@@ -77,8 +73,7 @@
                 line-height: 1 !important;
             }
 
-            /* Right-Hand Banner Controls */
-            .header-right-controls { display: flex; align-items: center; gap: 20px; }
+            /* "Who is DSG" Button (Sits cleanly next to/under logo) */
             .banner-action-btn {
                 background: rgba(0, 242, 254, 0.1);
                 border: 1px solid #00f2fe;
@@ -92,18 +87,27 @@
                 text-decoration: none !important;
                 transition: all 0.3s ease;
                 white-space: nowrap;
-                box-shadow: 0 0 15px rgba(0, 242, 254, 0.15);
+                box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
             }
             .banner-action-btn:hover {
                 background: #00f2fe; color: #000 !important;
-                box-shadow: 0 0 25px rgba(0, 242, 254, 0.6), 0 4px 15px rgba(0,0,0,0.6);
+                box-shadow: 0 0 25px rgba(0, 242, 254, 0.7), 0 4px 15px rgba(0,0,0,0.6);
                 transform: translateY(-2px);
             }
+
+            /* Hamburger Menu (FORCED TO FAR RIGHT!) */
+            #header nav {
+                position: static !important;
+                margin-left: auto !important; /* Shoves the hamburger button strictly to the right! */
+                right: auto !important;
+                top: auto !important;
+            }
+            #header nav ul { margin: 0 !important; }
 
             /* --- EXPLICIT ROW-TARGETED GRID LAYOUT --- */
             .studio-grid-layout { display: grid; grid-template-columns: 280px 1fr; gap: 60px; align-items: start; margin-top: 1.5em; }
             
-            /* Sidebar spans 2 rows so the layout holds firmly together */
+            /* Sidebar spans 2 rows on desktop so layout is rock solid */
             .studio-sidebar { grid-column: 1; grid-row: 1 / span 2; background: rgba(255, 255, 255, 0.015); border: 1px solid rgba(255, 255, 255, 0.04); padding: 1.8em; border-radius: 12px; box-shadow: 0 15px 40px rgba(0,0,0,0.4); backdrop-filter: blur(5px); }
             
             /* Main content occupies Row 1, Column 2 */
@@ -111,19 +115,105 @@
             
             .custom-section-title { margin-top: 2em !important; margin-bottom: 1em !important; font-size: 1.05em !important; font-weight: 800 !important; letter-spacing: 0.15em !important; text-transform: uppercase; color: #fff !important; border-bottom: 2px solid rgba(255, 255, 255, 0.08); padding-bottom: 0.4em; display: block; width: 100%; }
             .studio-sidebar .custom-section-title:first-child { margin-top: 0 !important; }
-            .actions { margin-bottom: 1.5em !important; display: flex; flex-direction: column; gap: 12px; width: 100%; }
+            .actions { margin-bottom: 1.5em !important; display: flex; flex-direction: column; gap: 14px; width: 100%; }
             .actions li { width: 100%; padding-left: 0 !important; }
 
-            .actions li a.button { font-weight: 800 !important; letter-spacing: 0.08em !important; transition: all 0.25s ease !important; border-radius: 6px !important; border: none !important; color: #fff !important; box-shadow: 0 6px 15px rgba(0,0,0,0.4) !important; width: 100% !important; text-align: center !important; display: block !important; text-transform: uppercase; }
-            .actions li a.button:hover { transform: translateY(-3px) scale(1.02) !important; filter: brightness(1.2) !important; }
-            .btn-youtube { background-color: #FF0000 !important; }
-            .btn-tiktok { background-color: #111216 !important; border: 2px solid #00f2fe !important; color: #fff !important; }
-            .btn-facebook { background-color: #1877F2 !important; }
-            .btn-instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important; }
-            .btn-itch { background-color: #fa5c5c !important; }
-            .btn-steam { background: linear-gradient(135deg, #1b2838 0%, #2a475e 100%) !important; border: 1px solid #66c0f4 !important; }
-            .btn-kickstarter { background-color: #05ce78 !important; color: #000 !important; }
-            .btn-kofi { background-color: #ff5e5b !important; }
+            /* --- COLOR-MATCHED NEON BUTTON GLOW SYSTEM --- */
+            .actions li a.button {
+                font-weight: 800 !important;
+                letter-spacing: 0.08em !important;
+                transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+                border-radius: 6px !important;
+                border: none !important;
+                color: #fff !important;
+                width: 100% !important;
+                text-align: center !important;
+                display: block !important;
+                text-transform: uppercase;
+            }
+            .actions li a.button:hover {
+                transform: translateY(-3px) scale(1.02) !important;
+                filter: brightness(1.15) !important;
+            }
+
+            /* YouTube - Red Neon Glow */
+            .btn-youtube {
+                background-color: #FF0000 !important;
+                box-shadow: 0 0 15px rgba(255, 0, 0, 0.35), 0 6px 15px rgba(0,0,0,0.5) !important;
+            }
+            .btn-youtube:hover {
+                box-shadow: 0 0 25px rgba(255, 0, 0, 0.75), 0 8px 20px rgba(0,0,0,0.7) !important;
+            }
+
+            /* TikTok - Cyberpunk Cyan Glow */
+            .btn-tiktok {
+                background-color: #111216 !important;
+                border: 2px solid #00f2fe !important;
+                color: #fff !important;
+                box-shadow: 0 0 15px rgba(0, 242, 254, 0.3), 0 6px 15px rgba(0,0,0,0.5) !important;
+            }
+            .btn-tiktok:hover {
+                background-color: #00f2fe !important;
+                color: #000 !important;
+                box-shadow: 0 0 25px rgba(0, 242, 254, 0.75), 0 8px 20px rgba(0,0,0,0.7) !important;
+            }
+
+            /* Facebook - Electric Blue Glow */
+            .btn-facebook {
+                background-color: #1877F2 !important;
+                box-shadow: 0 0 15px rgba(24, 119, 242, 0.35), 0 6px 15px rgba(0,0,0,0.5) !important;
+            }
+            .btn-facebook:hover {
+                box-shadow: 0 0 25px rgba(24, 119, 242, 0.75), 0 8px 20px rgba(0,0,0,0.7) !important;
+            }
+
+            /* Instagram - Sunset Gradient Glow */
+            .btn-instagram {
+                background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
+                box-shadow: 0 0 15px rgba(220, 39, 67, 0.35), 0 6px 15px rgba(0,0,0,0.5) !important;
+            }
+            .btn-instagram:hover {
+                box-shadow: 0 0 25px rgba(220, 39, 67, 0.75), 0 8px 20px rgba(0,0,0,0.7) !important;
+            }
+
+            /* itch.io - Crimson Glow */
+            .btn-itch {
+                background-color: #fa5c5c !important;
+                box-shadow: 0 0 15px rgba(250, 92, 92, 0.35), 0 6px 15px rgba(0,0,0,0.5) !important;
+            }
+            .btn-itch:hover {
+                box-shadow: 0 0 25px rgba(250, 92, 92, 0.75), 0 8px 20px rgba(0,0,0,0.7) !important;
+            }
+
+            /* Steam - Ice Blue / Navy Glow */
+            .btn-steam {
+                background: linear-gradient(135deg, #1b2838 0%, #2a475e 100%) !important;
+                border: 1px solid #66c0f4 !important;
+                box-shadow: 0 0 15px rgba(102, 192, 244, 0.3), 0 6px 15px rgba(0,0,0,0.5) !important;
+            }
+            .btn-steam:hover {
+                border-color: #00f2fe !important;
+                box-shadow: 0 0 25px rgba(102, 192, 244, 0.75), 0 8px 20px rgba(0,0,0,0.7) !important;
+            }
+
+            /* Kickstarter - Neon Green Glow */
+            .btn-kickstarter {
+                background-color: #05ce78 !important;
+                color: #000 !important;
+                box-shadow: 0 0 15px rgba(5, 206, 120, 0.35), 0 6px 15px rgba(0,0,0,0.5) !important;
+            }
+            .btn-kickstarter:hover {
+                box-shadow: 0 0 25px rgba(5, 206, 120, 0.75), 0 8px 20px rgba(0,0,0,0.7) !important;
+            }
+
+            /* Ko-fi - Coral / Pink Glow */
+            .btn-kofi {
+                background-color: #ff5e5b !important;
+                box-shadow: 0 0 15px rgba(255, 94, 91, 0.35), 0 6px 15px rgba(0,0,0,0.5) !important;
+            }
+            .btn-kofi:hover {
+                box-shadow: 0 0 25px rgba(255, 94, 91, 0.75), 0 8px 20px rgba(0,0,0,0.7) !important;
+            }
 
             /* --- 3D FLOATING MANIFESTO --- */
             .studio-manifesto { font-size: 1.18em !important; line-height: 1.8 !important; color: #b0b4d0 !important; background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%); padding: 2em; border-left: 4px solid #fa5c5c; border-radius: 0 12px 12px 0; margin-top: 1.5em !important; margin-bottom: 2em !important; box-shadow: 0 15px 35px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05); transition: transform 0.4s ease; }
@@ -154,60 +244,20 @@
             .vision-section ul li:before { content: "▸"; color: #fa5c5c; position: absolute; left: 0; top: 0; font-size: 1.2em; font-weight: bold; }
             .vision-section strong { color: #fff !important; }
 
-            /* --- AMBIENT MUSIC PLAYER (GLASSMORPHISM WITH SLIDER) --- */
+            /* --- AMBIENT MUSIC PLAYER --- */
             .ambient-player {
-                position: fixed;
-                bottom: 30px;
-                right: 30px;
-                background: rgba(13, 14, 18, 0.85);
-                backdrop-filter: blur(15px);
-                -webkit-backdrop-filter: blur(15px);
-                border: 1px solid rgba(0, 242, 254, 0.4);
-                padding: 10px 20px;
-                border-radius: 50px;
-                color: #00f2fe;
-                font-weight: 800;
-                font-size: 0.9em;
-                letter-spacing: 0.1em;
-                z-index: 10000;
-                display: flex;
-                align-items: center;
-                gap: 15px;
-                box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 15px rgba(0, 242, 254, 0.15);
-                transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+                position: fixed; bottom: 30px; right: 30px; background: rgba(13, 14, 18, 0.85); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+                border: 1px solid rgba(0, 242, 254, 0.4); padding: 10px 20px; border-radius: 50px; color: #00f2fe; font-weight: 800; font-size: 0.9em; letter-spacing: 0.1em;
+                z-index: 10000; display: flex; align-items: center; gap: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 15px rgba(0, 242, 254, 0.15); transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
             }
-            .ambient-player:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 15px 35px rgba(0,0,0,0.7), 0 0 25px rgba(0, 242, 254, 0.4);
-                background: rgba(0, 242, 254, 0.05);
-            }
-            .ambient-toggle-btn {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 35px;
-                height: 35px;
-                background: rgba(0, 242, 254, 0.15);
-                border-radius: 50%;
-                cursor: pointer;
-                transition: all 0.2s ease;
-            }
+            .ambient-player:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.7), 0 0 25px rgba(0, 242, 254, 0.4); background: rgba(0, 242, 254, 0.05); }
+            .ambient-toggle-btn { display: flex; align-items: center; justify-content: center; width: 35px; height: 35px; background: rgba(0, 242, 254, 0.15); border-radius: 50%; cursor: pointer; transition: all 0.2s ease; }
             .ambient-toggle-btn:hover { background: #00f2fe; color: #000; box-shadow: 0 0 15px rgba(0, 242, 254, 0.6); }
-            
             .ambient-volume-container { display: flex; align-items: center; gap: 8px; }
             .vol-icon { font-size: 1.1em; }
-            #ambient-volume {
-                -webkit-appearance: none;
-                width: 80px;
-                background: transparent;
-                cursor: pointer;
-            }
+            #ambient-volume { -webkit-appearance: none; width: 80px; background: transparent; cursor: pointer; }
             #ambient-volume::-webkit-slider-runnable-track { height: 4px; background: rgba(0, 242, 254, 0.3); border-radius: 2px; transition: background 0.3s ease; }
-            #ambient-volume::-webkit-slider-thumb {
-                -webkit-appearance: none; height: 12px; width: 12px; border-radius: 50%;
-                background: #00f2fe; margin-top: -4px; box-shadow: 0 0 10px rgba(0, 242, 254, 0.8); transition: all 0.3s ease;
-            }
-            
+            #ambient-volume::-webkit-slider-thumb { -webkit-appearance: none; height: 12px; width: 12px; border-radius: 50%; background: #00f2fe; margin-top: -4px; box-shadow: 0 0 10px rgba(0, 242, 254, 0.8); transition: all 0.3s ease; }
             .ambient-player.is-playing { border-color: #fa5c5c; color: #fa5c5c; box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 20px rgba(250, 92, 92, 0.3); }
             .ambient-player.is-playing:hover { background: rgba(250, 92, 92, 0.05); box-shadow: 0 15px 35px rgba(0,0,0,0.7), 0 0 30px rgba(250, 92, 92, 0.5); }
             .ambient-player.is-playing .ambient-toggle-btn { background: rgba(250, 92, 92, 0.15); }
@@ -227,13 +277,10 @@
             @media (max-width: 980px) {
                 .logo .symbol img { height: 90px !important; width: 90px !important; }
                 .logo .title { font-size: 2.2em !important; }
-                
-                /* This explicitly orders the stack on Mobile! */
                 .studio-grid-layout { grid-template-columns: 1fr; gap: 40px; }
-                .studio-main-content { grid-column: 1; grid-row: 1; } /* Projects stack first */
-                .studio-sidebar { grid-column: 1; grid-row: 2; } /* Socials stack second */
-                .vision-section { grid-column: 1; grid-row: 3; margin-top: 0; } /* Vision stacks last */
-                
+                .studio-main-content { grid-column: 1; grid-row: 1; }
+                .studio-sidebar { grid-column: 1; grid-row: 2; }
+                .vision-section { grid-column: 1; grid-row: 3; margin-top: 0; }
                 .actions { flex-direction: row; flex-wrap: wrap; }
                 .actions li { width: calc(50% - 5px); }
                 .ambient-player { bottom: 20px; right: 20px; font-size: 0.8em; padding: 8px 16px; }
@@ -262,14 +309,15 @@
                                 <span class="title">DARK SLUG GAMES</span>
                             </a>
                             
-                            <div class="header-right-controls">
-                                <a href="generic.html" class="banner-action-btn">Who is DARK SLUG GAMES?</a>
-                                <nav>
-                                    <ul>
-                                        <li><a href="#menu">Menu</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
+                            <!-- "Who is DSG" Button stays next to logo where you like it! -->
+                            <a href="generic.html" class="banner-action-btn">Who is DARK SLUG GAMES?</a>
+                            
+                            <!-- Hamburger Menu strictly shoved to the far right! -->
+                            <nav id="main-nav">
+                                <ul>
+                                    <li><a href="#menu">Menu</a></li>
+                                </ul>
+                            </nav>
                         </div>
                     </header>
 
