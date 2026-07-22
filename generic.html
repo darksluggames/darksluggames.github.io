@@ -11,6 +11,12 @@
         <link rel="stylesheet" href="assets/css/main.css" />
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
         <style>
+            /* --- CUSTOM CYBER-DARK SCROLLBAR --- */
+            ::-webkit-scrollbar { width: 10px; }
+            ::-webkit-scrollbar-track { background: #0d0e12; border-left: 1px solid rgba(255,255,255,0.05); }
+            ::-webkit-scrollbar-thumb { background: rgba(0, 242, 254, 0.3); border-radius: 5px; border: 2px solid #0d0e12; transition: all 0.3s ease; }
+            ::-webkit-scrollbar-thumb:hover { background: #00f2fe; box-shadow: 0 0 10px #00f2fe; }
+
             /* --- ATMOSPHERIC STUDIO BACKGROUND --- */
             body, #wrapper {
                 background: radial-gradient(circle at 50% 0%, #1a1c24 0%, #0d0e12 70%, #050508 100%) !important;
@@ -25,7 +31,8 @@
                 background: rgba(10, 11, 15, 0.85) !important;
                 backdrop-filter: blur(15px) !important;
             }
-            .logo { display: flex !important; align-items: center !important; text-decoration: none !important; }
+            .logo { display: flex !important; align-items: center !important; text-decoration: none !important; transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1); }
+            .logo:hover { transform: scale(1.03) !important; } /* Perfectly flat, level hover scaling! */
             .logo .symbol { background: transparent !important; padding: 0 !important; margin-right: 20px !important; border: none !important; display: flex !important; align-items: center !important; }
             .logo .symbol img { height: 90px !important; width: 90px !important; max-height: none !important; max-width: none !important; display: block !important; object-fit: contain !important; }
             .logo .title { font-size: 2.6em !important; font-weight: 900 !important; letter-spacing: 0.18em !important; color: #ffffff !important; text-shadow: 0 0 20px rgba(0, 242, 254, 0.2), 0 0 40px rgba(254, 9, 121, 0.1); line-height: 1.1 !important; }
@@ -40,12 +47,17 @@
             .bio-section strong { color: #fff !important; }
             .highlight-quote { font-size: 1.3em; font-style: italic; color: #fff; border-left: 4px solid #00f2fe; padding-left: 1.5em; margin: 2em 0; line-height: 1.6; }
 
-            /* --- INTERACTIVE NARRATION BUTTONS --- */
-            .narration-btn {
-                background: rgba(0, 242, 254, 0.1); border: 1px solid #00f2fe; color: #00f2fe !important; padding: 0.6em 1.4em; border-radius: 50px; font-weight: 800; font-size: 0.9em; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 2.5em; transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1); box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+            /* --- COMPACT NARRATION BUTTONS & BREATHING GLOW --- */
+            @keyframes breathingGlow {
+                0% { box-shadow: 0 0 15px rgba(250, 92, 92, 0.5); }
+                50% { box-shadow: 0 0 28px rgba(250, 92, 92, 1), 0 0 10px rgba(255, 255, 255, 0.3); }
+                100% { box-shadow: 0 0 15px rgba(250, 92, 92, 0.5); }
             }
-            .narration-btn:hover { background: #00f2fe; color: #000 !important; box-shadow: 0 0 25px rgba(0, 242, 254, 0.8), 0 4px 15px rgba(0,0,0,0.6); transform: translateY(-2px); }
-            .narration-btn.is-playing { background: #fa5c5c !important; border-color: #fa5c5c !important; color: #fff !important; box-shadow: 0 0 25px rgba(250, 92, 92, 0.8), 0 4px 15px rgba(0,0,0,0.6); }
+            .narration-btn {
+                background: rgba(0, 242, 254, 0.1); border: 1px solid #00f2fe; color: #00f2fe !important; padding: 0.35em 0.9em !important; border-radius: 50px; font-weight: 800; font-size: 0.75em !important; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; margin-bottom: 2em; transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1); box-shadow: 0 0 10px rgba(0, 242, 254, 0.15);
+            }
+            .narration-btn:hover { background: #00f2fe; color: #000 !important; box-shadow: 0 0 20px rgba(0, 242, 254, 0.8), 0 4px 10px rgba(0,0,0,0.6); transform: translateY(-2px); }
+            .narration-btn.is-playing { background: #fa5c5c !important; border-color: #fa5c5c !important; color: #fff !important; animation: breathingGlow 2.5s infinite ease-in-out !important; }
 
             /* --- INDESTRUCTIBLE DARK FOOTER --- */
             footer#footer { padding: 3em 0 2em 0 !important; border-top: 1px solid rgba(255, 255, 255, 0.05) !important; margin-top: 4em !important; background: transparent !important; color: #c8cbe2 !important; }
@@ -92,7 +104,7 @@
                             <h1 class="manifesto-header">WHO IS DARK SLUG GAMES?</h1>
                             <span class="manifesto-subtitle">By a Gamer. For Gamers. No Compromises.</span>
 
-                            <!-- Interactive Audio Narration Button -->
+                            <!-- Compact Tactical Audio Narration Button -->
                             <button class="narration-btn" onclick="toggleNarration('whois-audio', this)">
                                 <span>🔊</span> <span>LISTEN TO STUDIO MANIFESTO NARRATION</span>
                             </button>

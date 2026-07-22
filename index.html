@@ -11,6 +11,12 @@
         <link rel="stylesheet" href="assets/css/main.css" />
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
         <style>
+            /* --- CUSTOM CYBER-DARK SCROLLBAR --- */
+            ::-webkit-scrollbar { width: 10px; }
+            ::-webkit-scrollbar-track { background: #0d0e12; border-left: 1px solid rgba(255,255,255,0.05); }
+            ::-webkit-scrollbar-thumb { background: rgba(0, 242, 254, 0.3); border-radius: 5px; border: 2px solid #0d0e12; transition: all 0.3s ease; }
+            ::-webkit-scrollbar-thumb:hover { background: #00f2fe; box-shadow: 0 0 10px #00f2fe; }
+
             /* --- ATMOSPHERIC STUDIO BACKGROUND --- */
             body, #wrapper {
                 background: radial-gradient(circle at 50% 0%, #161821 0%, #0d0e12 60%, #030305 100%) !important;
@@ -36,16 +42,16 @@
                 max-width: 1400px !important;
             }
             
-            /* --- MASSIVE 3D INTERACTIVE LOGO --- */
+            /* --- MASSIVE LEVELED INTERACTIVE LOGO --- */
             .logo {
                 display: flex !important;
                 align-items: center !important;
                 text-decoration: none !important;
-                perspective: 1000px;
-                transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.27);
+                transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
             }
+            /* Perfectly flat, level scaling with zero tilt or lean! */
             .logo:hover {
-                transform: scale(1.05) rotateX(5deg) rotateY(-5deg);
+                transform: scale(1.03) !important;
             }
             .logo .symbol {
                 background: transparent !important;
@@ -141,36 +147,40 @@
             .studio-manifesto:hover { transform: translateY(-4px); }
             .studio-manifesto strong { color: #fff !important; }
 
-            /* --- INTERACTIVE NARRATION BUTTONS --- */
+            /* --- COMPACT NARRATION BUTTONS & BREATHING GLOW --- */
+            @keyframes breathingGlow {
+                0% { box-shadow: 0 0 15px rgba(250, 92, 92, 0.5); }
+                50% { box-shadow: 0 0 28px rgba(250, 92, 92, 1), 0 0 10px rgba(255, 255, 255, 0.3); }
+                100% { box-shadow: 0 0 15px rgba(250, 92, 92, 0.5); }
+            }
             .narration-btn {
                 background: rgba(0, 242, 254, 0.1);
                 border: 1px solid #00f2fe;
                 color: #00f2fe !important;
-                padding: 0.5em 1.2em;
+                padding: 0.35em 0.9em !important; /* Compact tactical sizing! */
                 border-radius: 50px;
                 font-weight: 800;
-                font-size: 0.85em;
-                letter-spacing: 0.1em;
+                font-size: 0.75em !important; /* Sleeker typography */
+                letter-spacing: 0.08em;
                 text-transform: uppercase;
                 cursor: pointer;
                 display: inline-flex;
                 align-items: center;
-                gap: 8px;
-                margin-top: 1.2em;
+                gap: 6px;
+                margin-top: 1em;
                 transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-                box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+                box-shadow: 0 0 10px rgba(0, 242, 254, 0.15);
             }
             .narration-btn:hover {
-                background: #00f2fe;
-                color: #000 !important;
-                box-shadow: 0 0 25px rgba(0, 242, 254, 0.8), 0 4px 15px rgba(0,0,0,0.6);
+                background: #00f2fe; color: #000 !important;
+                box-shadow: 0 0 20px rgba(0, 242, 254, 0.8), 0 4px 10px rgba(0,0,0,0.6);
                 transform: translateY(-2px);
             }
             .narration-btn.is-playing {
                 background: #fa5c5c !important;
                 border-color: #fa5c5c !important;
                 color: #fff !important;
-                box-shadow: 0 0 25px rgba(250, 92, 92, 0.8), 0 4px 15px rgba(0,0,0,0.6);
+                animation: breathingGlow 2.5s infinite ease-in-out !important; /* Hypnotic live pulse */
             }
 
             /* --- PROJECT SPACING & 3D HOVER --- */
@@ -211,8 +221,8 @@
             #ambient-volume { -webkit-appearance: none; width: 80px; background: transparent; cursor: pointer; }
             #ambient-volume::-webkit-slider-runnable-track { height: 4px; background: rgba(0, 242, 254, 0.3); border-radius: 2px; transition: background 0.3s ease; }
             #ambient-volume::-webkit-slider-thumb { -webkit-appearance: none; height: 12px; width: 12px; border-radius: 50%; background: #00f2fe; margin-top: -4px; box-shadow: 0 0 10px rgba(0, 242, 254, 0.8); transition: all 0.3s ease; }
-            .ambient-player.is-playing { border-color: #fa5c5c; color: #fa5c5c; box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 20px rgba(250, 92, 92, 0.3); }
-            .ambient-player.is-playing:hover { background: rgba(250, 92, 92, 0.05); box-shadow: 0 15px 35px rgba(0,0,0,0.7), 0 0 30px rgba(250, 92, 92, 0.5); }
+            .ambient-player.is-playing { border-color: #fa5c5c; color: #fa5c5c; animation: breathingGlow 3s infinite ease-in-out !important; }
+            .ambient-player.is-playing:hover { background: rgba(250, 92, 92, 0.05); }
             .ambient-player.is-playing .ambient-toggle-btn { background: rgba(250, 92, 92, 0.15); }
             .ambient-player.is-playing .ambient-toggle-btn:hover { background: #fa5c5c; color: #fff; box-shadow: 0 0 15px rgba(250, 92, 92, 0.6); }
             .ambient-player.is-playing #ambient-volume::-webkit-slider-runnable-track { background: rgba(250, 92, 92, 0.3); }
@@ -322,7 +332,7 @@
                                             Welcome to the official <strong>Dark Slug Games</strong> hub— by Knighthunter Thorin Cook a dedicated space for experimental, atmospheric, and boundary-pushing indie projects. Whether you're here to watch our latest trailers, explore current development builds, I'm glad you stopped by... I believe that no idea is a bad idea until proven otherwise, and the best gaming experiences come from raw, uncompromising creativity through being original or building on a foundation that made games original and memorable in the first place.. Dive into the projects library below, follow the development journey, or stay up to date by checking out DSG's social media accounts.
                                             
                                             <br />
-                                            <!-- Interactive Audio Narration Button -->
+                                            <!-- Compact Tactical Narration Button -->
                                             <button class="narration-btn" onclick="toggleNarration('welcome-audio', this)">
                                                 <span>🔊</span> <span>LISTEN TO WELCOME NARRATION</span>
                                             </button>
@@ -370,8 +380,8 @@
                                     <h3 class="custom-section-title" style="margin-top: 0 !important; border-bottom: none !important;">What Am I Trying to Accomplish?</h3>
                                     <p style="font-size: 1.15em !important; color: #00f2fe !important; font-weight: 700; margin-top: -0.5em; margin-bottom: 0.5em !important;">Reclaiming the Groundbreaking DNA of Classic Gaming.</p>
                                     
-                                    <!-- Interactive Audio Narration Button -->
-                                    <div style="margin-bottom: 1.8em;">
+                                    <!-- Compact Tactical Narration Button -->
+                                    <div style="margin-bottom: 1.2em;">
                                         <button class="narration-btn" onclick="toggleNarration('trying-audio', this)">
                                             <span>🔊</span> <span>LISTEN TO VISION NARRATION</span>
                                         </button>
@@ -441,7 +451,6 @@
             
             <!-- Custom Audio Ducking & Narration Controller -->
             <script>
-                // Global audio controller to prevent overlapping narrations
                 var currentNarration = null;
                 var currentNarrationBtn = null;
 
@@ -450,18 +459,15 @@
                     var ambientAudio = document.getElementById("ambient-audio");
                     var ambientSlider = document.getElementById("ambient-volume");
 
-                    // If clicking the same narration that is currently playing, pause it
                     if (currentNarration === targetAudio && !targetAudio.paused) {
                         targetAudio.pause();
                         btnElement.classList.remove("is-playing");
                         btnElement.innerHTML = "<span>🔊</span> <span>LISTEN TO NARRATION</span>";
-                        // Restore ambient volume
                         if (!ambientAudio.paused) ambientAudio.volume = ambientSlider.value;
                         currentNarration = null;
                         return;
                     }
 
-                    // Stop any other narration currently playing
                     if (currentNarration && !currentNarration.paused) {
                         currentNarration.pause();
                         currentNarration.currentTime = 0;
@@ -471,7 +477,6 @@
                         }
                     }
 
-                    // Start new narration and apply audio ducking to background music
                     targetAudio.play();
                     btnElement.classList.add("is-playing");
                     btnElement.innerHTML = "<span>❚❚</span> <span>PAUSE NARRATION</span>";
@@ -479,10 +484,9 @@
                     currentNarrationBtn = btnElement;
 
                     if (!ambientAudio.paused) {
-                        ambientAudio.volume = Math.min(0.15, ambientSlider.value); // Lower ambient music to 15%
+                        ambientAudio.volume = Math.min(0.15, ambientSlider.value);
                     }
 
-                    // When narration ends, restore background music volume
                     targetAudio.onended = function() {
                         btnElement.classList.remove("is-playing");
                         btnElement.innerHTML = "<span>🔊</span> <span>LISTEN TO NARRATION</span>";
@@ -518,7 +522,6 @@
                     });
 
                     volumeSlider.addEventListener("input", function() {
-                        // Only update direct audio volume if a voiceover isn't actively ducking it
                         if (!currentNarration || currentNarration.paused) {
                             audio.volume = this.value;
                         }
