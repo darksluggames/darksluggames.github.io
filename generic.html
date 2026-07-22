@@ -17,138 +17,43 @@
                 color: #c8cbe2 !important;
             }
 
-            /* --- MASSIVE HEADER & LOGO OVERRIDES (Indestructible Sizing!) --- */
+            /* --- MASSIVE HEADER & LOGO OVERRIDES --- */
             header#header {
-                padding-top: 2em !important;
-                padding-bottom: 2em !important;
+                padding-top: 1.5em !important;
+                padding-bottom: 1.5em !important;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                background: rgba(10, 11, 15, 0.85) !important;
+                backdrop-filter: blur(15px) !important;
             }
-            .logo {
-                display: flex !important;
-                align-items: center !important;
-                text-decoration: none !important;
-            }
-            .logo .symbol {
-                background: transparent !important;
-                padding: 0 !important;
-                margin-right: 20px !important;
-                border: none !important;
-                display: flex !important;
-                align-items: center !important;
-            }
-            .logo .symbol img {
-                height: 90px !important;
-                width: 90px !important;
-                max-height: none !important;
-                max-width: none !important;
-                display: block !important;
-                object-fit: contain !important;
-            }
-            .logo .title {
-                font-size: 2.6em !important;
-                font-weight: 900 !important;
-                letter-spacing: 0.18em !important;
-                color: #ffffff !important;
-                text-shadow: 0 0 20px rgba(0, 242, 254, 0.2), 0 0 40px rgba(254, 9, 121, 0.1);
-                line-height: 1.1 !important;
-            }
+            .logo { display: flex !important; align-items: center !important; text-decoration: none !important; }
+            .logo .symbol { background: transparent !important; padding: 0 !important; margin-right: 20px !important; border: none !important; display: flex !important; align-items: center !important; }
+            .logo .symbol img { height: 90px !important; width: 90px !important; max-height: none !important; max-width: none !important; display: block !important; object-fit: contain !important; }
+            .logo .title { font-size: 2.6em !important; font-weight: 900 !important; letter-spacing: 0.18em !important; color: #ffffff !important; text-shadow: 0 0 20px rgba(0, 242, 254, 0.2), 0 0 40px rgba(254, 9, 121, 0.1); line-height: 1.1 !important; }
 
             /* --- MANIFESTO CONTENT STYLING --- */
-            .manifesto-header {
-                font-size: 2.5em !important;
-                font-weight: 900 !important;
-                color: #fff !important;
-                letter-spacing: 0.05em;
-                margin-bottom: 0.2em !important;
-            }
-            .manifesto-subtitle {
-                font-size: 1.2em;
-                color: #fa5c5c;
-                font-weight: 700;
-                text-transform: uppercase;
-                letter-spacing: 0.15em;
-                margin-bottom: 2em;
-                display: block;
-            }
-            .bio-section {
-                background: rgba(255, 255, 255, 0.02);
-                border: 1px solid rgba(255, 255, 255, 0.05);
-                border-radius: 8px;
-                padding: 2.5em;
-                margin-bottom: 2.5em;
-                box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            }
-            .bio-section h3 {
-                color: #fff !important;
-                font-size: 1.4em !important;
-                font-weight: 800 !important;
-                letter-spacing: 0.1em;
-                text-transform: uppercase;
-                border-bottom: 2px solid #fa5c5c;
-                padding-bottom: 0.4em;
-                margin-bottom: 1.2em !important;
-                display: inline-block;
-            }
-            .bio-section p {
-                font-size: 1.15em !important;
-                line-height: 1.8 !important;
-                color: #b0b4d0 !important;
-                margin-bottom: 1.5em !important;
-            }
-            .bio-section p:last-child {
-                margin-bottom: 0 !important;
-            }
-            .bio-section strong {
-                color: #fff !important;
-            }
-            .highlight-quote {
-                font-size: 1.3em;
-                font-style: italic;
-                color: #fff;
-                border-left: 4px solid #00f2fe;
-                padding-left: 1.5em;
-                margin: 2em 0;
-                line-height: 1.6;
-            }
+            .manifesto-header { font-size: 2.5em !important; font-weight: 900 !important; color: #fff !important; letter-spacing: 0.05em; margin-bottom: 0.2em !important; }
+            .manifesto-subtitle { font-size: 1.2em; color: #fa5c5c; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 1em; display: block; }
+            .bio-section { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 8px; padding: 2.5em; margin-bottom: 2.5em; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+            .bio-section h3 { color: #fff !important; font-size: 1.4em !important; font-weight: 800 !important; letter-spacing: 0.1em; text-transform: uppercase; border-bottom: 2px solid #fa5c5c; padding-bottom: 0.4em; margin-bottom: 1.2em !important; display: inline-block; }
+            .bio-section p { font-size: 1.15em !important; line-height: 1.8 !important; color: #b0b4d0 !important; margin-bottom: 1.5em !important; }
+            .bio-section p:last-child { margin-bottom: 0 !important; }
+            .bio-section strong { color: #fff !important; }
+            .highlight-quote { font-size: 1.3em; font-style: italic; color: #fff; border-left: 4px solid #00f2fe; padding-left: 1.5em; margin: 2em 0; line-height: 1.6; }
 
-            /* --- INDESTRUCTIBLE DARK FOOTER OVERRIDES --- */
-            footer#footer {
-                padding: 3em 0 2em 0 !important;
-                border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
-                margin-top: 4em !important;
-                background: transparent !important;
-                color: #c8cbe2 !important;
+            /* --- INTERACTIVE NARRATION BUTTONS --- */
+            .narration-btn {
+                background: rgba(0, 242, 254, 0.1); border: 1px solid #00f2fe; color: #00f2fe !important; padding: 0.6em 1.4em; border-radius: 50px; font-weight: 800; font-size: 0.9em; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 2.5em; transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1); box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
             }
-            .email-contact-box {
-                background: rgba(255, 255, 255, 0.02) !important;
-                border: 1px solid rgba(255, 255, 255, 0.05) !important;
-                border-left: 4px solid #00f2fe !important;
-                padding: 1.5em 2em;
-                border-radius: 4px 8px 8px 4px;
-                display: inline-block;
-                margin-bottom: 2em;
-                color: #c8cbe2 !important;
-            }
-            .email-contact-box h3 {
-                color: #fff !important;
-                margin-bottom: 0.3em !important;
-                font-size: 1.2em !important;
-                text-transform: uppercase;
-                letter-spacing: 0.1em;
-            }
-            .email-contact-box p {
-                margin: 0 !important;
-                font-size: 1.1em;
-                color: #b0b4d0 !important;
-            }
-            .email-contact-box a {
-                color: #00f2fe !important;
-                font-weight: 700;
-                text-decoration: none;
-            }
-            .email-contact-box a:hover {
-                text-decoration: underline;
-            }
+            .narration-btn:hover { background: #00f2fe; color: #000 !important; box-shadow: 0 0 25px rgba(0, 242, 254, 0.8), 0 4px 15px rgba(0,0,0,0.6); transform: translateY(-2px); }
+            .narration-btn.is-playing { background: #fa5c5c !important; border-color: #fa5c5c !important; color: #fff !important; box-shadow: 0 0 25px rgba(250, 92, 92, 0.8), 0 4px 15px rgba(0,0,0,0.6); }
+
+            /* --- INDESTRUCTIBLE DARK FOOTER --- */
+            footer#footer { padding: 3em 0 2em 0 !important; border-top: 1px solid rgba(255, 255, 255, 0.05) !important; margin-top: 4em !important; background: transparent !important; color: #c8cbe2 !important; }
+            .email-contact-box { background: rgba(255, 255, 255, 0.02) !important; border: 1px solid rgba(255, 255, 255, 0.05) !important; border-left: 4px solid #00f2fe !important; padding: 1.5em 2em; border-radius: 4px 8px 8px 4px; display: inline-block; margin-bottom: 2em; color: #c8cbe2 !important; }
+            .email-contact-box h3 { color: #fff !important; margin-bottom: 0.3em !important; font-size: 1.2em !important; text-transform: uppercase; letter-spacing: 0.1em; }
+            .email-contact-box p { margin: 0 !important; font-size: 1.1em; color: #b0b4d0 !important; }
+            .email-contact-box a { color: #00f2fe !important; font-weight: 700; text-decoration: none; }
+            .email-contact-box a:hover { text-decoration: underline; }
         </style>
     </head>
     <body class="is-preload">
@@ -186,6 +91,12 @@
                             
                             <h1 class="manifesto-header">WHO IS DARK SLUG GAMES?</h1>
                             <span class="manifesto-subtitle">By a Gamer. For Gamers. No Compromises.</span>
+
+                            <!-- Interactive Audio Narration Button -->
+                            <button class="narration-btn" onclick="toggleNarration('whois-audio', this)">
+                                <span>🔊</span> <span>LISTEN TO STUDIO MANIFESTO NARRATION</span>
+                            </button>
+                            <audio id="whois-audio" src="assets/whoisdarksluggames.mp3"></audio>
 
                             <div class="bio-section">
                                 <h3>The Solo Developer</h3>
@@ -236,6 +147,42 @@
             <script src="assets/js/breakpoints.min.js"></script>
             <script src="assets/js/util.js"></script>
             <script src="assets/js/main.js"></script>
+
+            <!-- Narration Controller -->
+            <script>
+                var currentNarration = null;
+                var currentNarrationBtn = null;
+
+                function toggleNarration(audioId, btnElement) {
+                    var targetAudio = document.getElementById(audioId);
+                    if (currentNarration === targetAudio && !targetAudio.paused) {
+                        targetAudio.pause();
+                        btnElement.classList.remove("is-playing");
+                        btnElement.innerHTML = "<span>🔊</span> <span>LISTEN TO STUDIO MANIFESTO NARRATION</span>";
+                        currentNarration = null;
+                        return;
+                    }
+                    if (currentNarration && !currentNarration.paused) {
+                        currentNarration.pause();
+                        currentNarration.currentTime = 0;
+                        if (currentNarrationBtn) {
+                            currentNarrationBtn.classList.remove("is-playing");
+                            currentNarrationBtn.innerHTML = "<span>🔊</span> <span>LISTEN TO STUDIO MANIFESTO NARRATION</span>";
+                        }
+                    }
+                    targetAudio.play();
+                    btnElement.classList.add("is-playing");
+                    btnElement.innerHTML = "<span>❚❚</span> <span>PAUSE NARRATION</span>";
+                    currentNarration = targetAudio;
+                    currentNarrationBtn = btnElement;
+
+                    targetAudio.onended = function() {
+                        btnElement.classList.remove("is-playing");
+                        btnElement.innerHTML = "<span>🔊</span> <span>LISTEN TO STUDIO MANIFESTO NARRATION</span>";
+                        currentNarration = null;
+                    };
+                }
+            </script>
 
     </body>
 </html>

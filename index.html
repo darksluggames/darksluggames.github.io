@@ -73,7 +73,7 @@
                 line-height: 1 !important;
             }
 
-            /* "Who is DSG" Button (Sits cleanly next to/under logo) */
+            /* "Who is DSG" Button */
             .banner-action-btn {
                 background: rgba(0, 242, 254, 0.1);
                 border: 1px solid #00f2fe;
@@ -98,7 +98,7 @@
             /* Hamburger Menu (FORCED TO FAR RIGHT!) */
             #header nav {
                 position: static !important;
-                margin-left: auto !important; /* Shoves the hamburger button strictly to the right! */
+                margin-left: auto !important;
                 right: auto !important;
                 top: auto !important;
             }
@@ -106,11 +106,7 @@
 
             /* --- EXPLICIT ROW-TARGETED GRID LAYOUT --- */
             .studio-grid-layout { display: grid; grid-template-columns: 280px 1fr; gap: 60px; align-items: start; margin-top: 1.5em; }
-            
-            /* Sidebar spans 2 rows on desktop so layout is rock solid */
             .studio-sidebar { grid-column: 1; grid-row: 1 / span 2; background: rgba(255, 255, 255, 0.015); border: 1px solid rgba(255, 255, 255, 0.04); padding: 1.8em; border-radius: 12px; box-shadow: 0 15px 40px rgba(0,0,0,0.4); backdrop-filter: blur(5px); }
-            
-            /* Main content occupies Row 1, Column 2 */
             .studio-main-content { grid-column: 2; grid-row: 1; }
             
             .custom-section-title { margin-top: 2em !important; margin-bottom: 1em !important; font-size: 1.05em !important; font-weight: 800 !important; letter-spacing: 0.15em !important; text-transform: uppercase; color: #fff !important; border-bottom: 2px solid rgba(255, 255, 255, 0.08); padding-bottom: 0.4em; display: block; width: 100%; }
@@ -120,105 +116,62 @@
 
             /* --- COLOR-MATCHED NEON BUTTON GLOW SYSTEM --- */
             .actions li a.button {
-                font-weight: 800 !important;
-                letter-spacing: 0.08em !important;
-                transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
-                border-radius: 6px !important;
-                border: none !important;
-                color: #fff !important;
-                width: 100% !important;
-                text-align: center !important;
-                display: block !important;
-                text-transform: uppercase;
+                font-weight: 800 !important; letter-spacing: 0.08em !important; transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1) !important; border-radius: 6px !important; border: none !important; color: #fff !important; width: 100% !important; text-align: center !important; display: block !important; text-transform: uppercase;
             }
-            .actions li a.button:hover {
-                transform: translateY(-3px) scale(1.02) !important;
-                filter: brightness(1.15) !important;
-            }
-
-            /* YouTube - Red Neon Glow */
-            .btn-youtube {
-                background-color: #FF0000 !important;
-                box-shadow: 0 0 15px rgba(255, 0, 0, 0.35), 0 6px 15px rgba(0,0,0,0.5) !important;
-            }
-            .btn-youtube:hover {
-                box-shadow: 0 0 25px rgba(255, 0, 0, 0.75), 0 8px 20px rgba(0,0,0,0.7) !important;
-            }
-
-            /* TikTok - Cyberpunk Cyan Glow */
-            .btn-tiktok {
-                background-color: #111216 !important;
-                border: 2px solid #00f2fe !important;
-                color: #fff !important;
-                box-shadow: 0 0 15px rgba(0, 242, 254, 0.3), 0 6px 15px rgba(0,0,0,0.5) !important;
-            }
-            .btn-tiktok:hover {
-                background-color: #00f2fe !important;
-                color: #000 !important;
-                box-shadow: 0 0 25px rgba(0, 242, 254, 0.75), 0 8px 20px rgba(0,0,0,0.7) !important;
-            }
-
-            /* Facebook - Electric Blue Glow */
-            .btn-facebook {
-                background-color: #1877F2 !important;
-                box-shadow: 0 0 15px rgba(24, 119, 242, 0.35), 0 6px 15px rgba(0,0,0,0.5) !important;
-            }
-            .btn-facebook:hover {
-                box-shadow: 0 0 25px rgba(24, 119, 242, 0.75), 0 8px 20px rgba(0,0,0,0.7) !important;
-            }
-
-            /* Instagram - Sunset Gradient Glow */
-            .btn-instagram {
-                background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
-                box-shadow: 0 0 15px rgba(220, 39, 67, 0.35), 0 6px 15px rgba(0,0,0,0.5) !important;
-            }
-            .btn-instagram:hover {
-                box-shadow: 0 0 25px rgba(220, 39, 67, 0.75), 0 8px 20px rgba(0,0,0,0.7) !important;
-            }
-
-            /* itch.io - Crimson Glow */
-            .btn-itch {
-                background-color: #fa5c5c !important;
-                box-shadow: 0 0 15px rgba(250, 92, 92, 0.35), 0 6px 15px rgba(0,0,0,0.5) !important;
-            }
-            .btn-itch:hover {
-                box-shadow: 0 0 25px rgba(250, 92, 92, 0.75), 0 8px 20px rgba(0,0,0,0.7) !important;
-            }
-
-            /* Steam - Ice Blue / Navy Glow */
-            .btn-steam {
-                background: linear-gradient(135deg, #1b2838 0%, #2a475e 100%) !important;
-                border: 1px solid #66c0f4 !important;
-                box-shadow: 0 0 15px rgba(102, 192, 244, 0.3), 0 6px 15px rgba(0,0,0,0.5) !important;
-            }
-            .btn-steam:hover {
-                border-color: #00f2fe !important;
-                box-shadow: 0 0 25px rgba(102, 192, 244, 0.75), 0 8px 20px rgba(0,0,0,0.7) !important;
-            }
-
-            /* Kickstarter - Neon Green Glow */
-            .btn-kickstarter {
-                background-color: #05ce78 !important;
-                color: #000 !important;
-                box-shadow: 0 0 15px rgba(5, 206, 120, 0.35), 0 6px 15px rgba(0,0,0,0.5) !important;
-            }
-            .btn-kickstarter:hover {
-                box-shadow: 0 0 25px rgba(5, 206, 120, 0.75), 0 8px 20px rgba(0,0,0,0.7) !important;
-            }
-
-            /* Ko-fi - Coral / Pink Glow */
-            .btn-kofi {
-                background-color: #ff5e5b !important;
-                box-shadow: 0 0 15px rgba(255, 94, 91, 0.35), 0 6px 15px rgba(0,0,0,0.5) !important;
-            }
-            .btn-kofi:hover {
-                box-shadow: 0 0 25px rgba(255, 94, 91, 0.75), 0 8px 20px rgba(0,0,0,0.7) !important;
-            }
+            .actions li a.button:hover { transform: translateY(-3px) scale(1.02) !important; filter: brightness(1.15) !important; }
+            .btn-youtube { background-color: #FF0000 !important; box-shadow: 0 0 15px rgba(255, 0, 0, 0.35), 0 6px 15px rgba(0,0,0,0.5) !important; }
+            .btn-youtube:hover { box-shadow: 0 0 25px rgba(255, 0, 0, 0.75), 0 8px 20px rgba(0,0,0,0.7) !important; }
+            .btn-tiktok { background-color: #111216 !important; border: 2px solid #00f2fe !important; color: #fff !important; box-shadow: 0 0 15px rgba(0, 242, 254, 0.3), 0 6px 15px rgba(0,0,0,0.5) !important; }
+            .btn-tiktok:hover { background-color: #00f2fe !important; color: #000 !important; box-shadow: 0 0 25px rgba(0, 242, 254, 0.75), 0 8px 20px rgba(0,0,0,0.7) !important; }
+            .btn-facebook { background-color: #1877F2 !important; box-shadow: 0 0 15px rgba(24, 119, 242, 0.35), 0 6px 15px rgba(0,0,0,0.5) !important; }
+            .btn-facebook:hover { box-shadow: 0 0 25px rgba(24, 119, 242, 0.75), 0 8px 20px rgba(0,0,0,0.7) !important; }
+            .btn-instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important; box-shadow: 0 0 15px rgba(220, 39, 67, 0.35), 0 6px 15px rgba(0,0,0,0.5) !important; }
+            .btn-instagram:hover { box-shadow: 0 0 25px rgba(220, 39, 67, 0.75), 0 8px 20px rgba(0,0,0,0.7) !important; }
+            .btn-itch { background-color: #fa5c5c !important; box-shadow: 0 0 15px rgba(250, 92, 92, 0.35), 0 6px 15px rgba(0,0,0,0.5) !important; }
+            .btn-itch:hover { box-shadow: 0 0 25px rgba(250, 92, 92, 0.75), 0 8px 20px rgba(0,0,0,0.7) !important; }
+            .btn-steam { background: linear-gradient(135deg, #1b2838 0%, #2a475e 100%) !important; border: 1px solid #66c0f4 !important; box-shadow: 0 0 15px rgba(102, 192, 244, 0.3), 0 6px 15px rgba(0,0,0,0.5) !important; }
+            .btn-steam:hover { border-color: #00f2fe !important; box-shadow: 0 0 25px rgba(102, 192, 244, 0.75), 0 8px 20px rgba(0,0,0,0.7) !important; }
+            .btn-kickstarter { background-color: #05ce78 !important; color: #000 !important; box-shadow: 0 0 15px rgba(5, 206, 120, 0.35), 0 6px 15px rgba(0,0,0,0.5) !important; }
+            .btn-kickstarter:hover { box-shadow: 0 0 25px rgba(5, 206, 120, 0.75), 0 8px 20px rgba(0,0,0,0.7) !important; }
+            .btn-kofi { background-color: #ff5e5b !important; box-shadow: 0 0 15px rgba(255, 94, 91, 0.35), 0 6px 15px rgba(0,0,0,0.5) !important; }
+            .btn-kofi:hover { box-shadow: 0 0 25px rgba(255, 94, 91, 0.75), 0 8px 20px rgba(0,0,0,0.7) !important; }
 
             /* --- 3D FLOATING MANIFESTO --- */
-            .studio-manifesto { font-size: 1.18em !important; line-height: 1.8 !important; color: #b0b4d0 !important; background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%); padding: 2em; border-left: 4px solid #fa5c5c; border-radius: 0 12px 12px 0; margin-top: 1.5em !important; margin-bottom: 2em !important; box-shadow: 0 15px 35px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05); transition: transform 0.4s ease; }
+            .studio-manifesto { font-size: 1.18em !important; line-height: 1.8 !important; color: #b0b4d0 !important; background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%); padding: 2em; border-left: 4px solid #fa5c5c; border-radius: 0 12px 12px 0; margin-top: 1.5em !important; margin-bottom: 2em !important; box-shadow: 0 15px 35px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05); transition: transform 0.4s ease; position: relative; }
             .studio-manifesto:hover { transform: translateY(-4px); }
             .studio-manifesto strong { color: #fff !important; }
+
+            /* --- INTERACTIVE NARRATION BUTTONS --- */
+            .narration-btn {
+                background: rgba(0, 242, 254, 0.1);
+                border: 1px solid #00f2fe;
+                color: #00f2fe !important;
+                padding: 0.5em 1.2em;
+                border-radius: 50px;
+                font-weight: 800;
+                font-size: 0.85em;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                cursor: pointer;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                margin-top: 1.2em;
+                transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+                box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+            }
+            .narration-btn:hover {
+                background: #00f2fe;
+                color: #000 !important;
+                box-shadow: 0 0 25px rgba(0, 242, 254, 0.8), 0 4px 15px rgba(0,0,0,0.6);
+                transform: translateY(-2px);
+            }
+            .narration-btn.is-playing {
+                background: #fa5c5c !important;
+                border-color: #fa5c5c !important;
+                color: #fff !important;
+                box-shadow: 0 0 25px rgba(250, 92, 92, 0.8), 0 4px 15px rgba(0,0,0,0.6);
+            }
 
             /* --- PROJECT SPACING & 3D HOVER --- */
             .projects-section-title { margin-top: 2.2em !important; margin-bottom: 0.6em !important; }
@@ -273,7 +226,7 @@
             .email-contact-box a { color: #00f2fe !important; font-weight: 700; text-decoration: none; }
             .email-contact-box a:hover { text-decoration: underline; }
 
-            /* --- RESPONSIVE MOBILE COLLAPSE (The Grid Order Intercept!) --- */
+            /* --- RESPONSIVE MOBILE COLLAPSE --- */
             @media (max-width: 980px) {
                 .logo .symbol img { height: 90px !important; width: 90px !important; }
                 .logo .title { font-size: 2.2em !important; }
@@ -309,10 +262,8 @@
                                 <span class="title">DARK SLUG GAMES</span>
                             </a>
                             
-                            <!-- "Who is DSG" Button stays next to logo where you like it! -->
                             <a href="generic.html" class="banner-action-btn">Who is DARK SLUG GAMES?</a>
                             
-                            <!-- Hamburger Menu strictly shoved to the far right! -->
                             <nav id="main-nav">
                                 <ul>
                                     <li><a href="#menu">Menu</a></li>
@@ -337,7 +288,7 @@
                             
                             <div class="studio-grid-layout">
                                 
-                                <!-- LEFT COLUMN: BUTTON ECOSYSTEM (Row 2 on Mobile) -->
+                                <!-- LEFT COLUMN: BUTTON ECOSYSTEM -->
                                 <aside class="studio-sidebar">
                                     <h3 class="custom-section-title">Social Media</h3>
                                     <ul class="actions">
@@ -360,7 +311,7 @@
                                     </ul>
                                 </aside>
 
-                                <!-- RIGHT COLUMN: MANIFESTO & PROJECTS (Row 1 on Mobile) -->
+                                <!-- RIGHT COLUMN: MANIFESTO & PROJECTS -->
                                 <main class="studio-main-content">
                                     
                                     <header>
@@ -368,7 +319,14 @@
                                         <span style="font-size: 0.75em; color: #ffffff; font-weight: 400;">An Independent Game Studio & Publisher</span></h1>
                                         
                                         <div class="studio-manifesto">
-                                            Welcome to the official <strong>Dark Slug Games</strong> hub—a dedicated space for experimental, atmospheric, and boundary-pushing indie projects. Whether you're here to watch our latest trailers, explore current development builds, or connect across our developer ecosystems, we're glad you stepped into the shadows. We believe that no idea is too strange to explore, and the best gaming experiences come from raw, uncompromising creativity. Dive into our library below, follow our development journey, and let's keep making cool things together.
+                                            Welcome to the official <strong>Dark Slug Games</strong> hub— by Knighthunter Thorin Cook a dedicated space for experimental, atmospheric, and boundary-pushing indie projects. Whether you're here to watch our latest trailers, explore current development builds, I'm glad you stopped by... I believe that no idea is a bad idea until proven otherwise, and the best gaming experiences come from raw, uncompromising creativity through being original or building on a foundation that made games original and memorable in the first place.. Dive into the projects library below, follow the development journey, or stay up to date by checking out DSG's social media accounts.
+                                            
+                                            <br />
+                                            <!-- Interactive Audio Narration Button -->
+                                            <button class="narration-btn" onclick="toggleNarration('welcome-audio', this)">
+                                                <span>🔊</span> <span>LISTEN TO WELCOME NARRATION</span>
+                                            </button>
+                                            <audio id="welcome-audio" src="assets/welcome.mp3"></audio>
                                         </div>
                                     </header>
 
@@ -407,23 +365,31 @@
 
                                 </main>
 
-                                <!-- VISION SECTION (Row 3 on Mobile) -->
+                                <!-- VISION SECTION -->
                                 <section class="vision-section">
-                                    <h3 class="custom-section-title" style="margin-top: 0 !important; border-bottom: none !important;">What I Am Trying to Accomplish</h3>
-                                    <p style="font-size: 1.15em !important; color: #00f2fe !important; font-weight: 700; margin-top: -0.5em; margin-bottom: 1.5em !important;">Reclaiming the Groundbreaking DNA of Classic Gaming</p>
+                                    <h3 class="custom-section-title" style="margin-top: 0 !important; border-bottom: none !important;">What Am I Trying to Accomplish?</h3>
+                                    <p style="font-size: 1.15em !important; color: #00f2fe !important; font-weight: 700; margin-top: -0.5em; margin-bottom: 0.5em !important;">Reclaiming the Groundbreaking DNA of Classic Gaming.</p>
                                     
+                                    <!-- Interactive Audio Narration Button -->
+                                    <div style="margin-bottom: 1.8em;">
+                                        <button class="narration-btn" onclick="toggleNarration('trying-audio', this)">
+                                            <span>🔊</span> <span>LISTEN TO VISION NARRATION</span>
+                                        </button>
+                                        <audio id="trying-audio" src="assets/trying.mp3"></audio>
+                                    </div>
+
                                     <p>Modern gaming has increasingly shifted toward a digital blob of cloned ideas and genre-chasing cash grabs. I started Dark Slug Games to actively push back against that trend. My goal is to breathe new life into the medium by building upon the foundational elements that made us fall in love with video games in the first place—an era when every title had a distinct visual identity, unforgettable atmosphere, daring gameplay mechanics, and box art you could still see if you closed your eyes twenty years later.</p>
                                     
-                                    <p><strong>Our Legendary Inspirations:</strong><br />
+                                    <p><strong>Inspirations:</strong><br />
                                     The creative DNA of this studio is rooted in the bold, experimental spirit of late-90s and 2000s gaming. I am deeply inspired by unforgettable classics that took massive creative risks:</p>
                                     
                                     <ul>
                                         <li><strong>Experimental & Psychological Dread:</strong> The bizarre, voice-controlled virtual biology of <em>SeaMan</em> on the Sega Dreamcast, alongside the deeply unsettling atmospheres of <em>Silent Hill</em>, <em>Rule of Rose</em>, and <em>Manhunt</em>.</li>
-                                        <li><strong>Genre-Defining Action & Tension:</strong> The tight, revolutionary design of <em>Resident Evil 4</em>, <em>Metroid</em> on the GameCube, <em>Metal Gear</em>, and the tactical perfection of <em>Splinter Cell: Chaos Theory</em>.</li>
+                                        <li><strong>Genre-Defining Action & Tension:</strong> The tight, revolutionary design of <em>Resident Evil 4</em>, <em>Metroid Prime</em> on GameCube, <em>Metal Gear</em>, and the tactical perfection of <em>Splinter Cell: Chaos Theory</em>.</li>
                                         <li><strong>Pure Iconic Personality:</strong> The timeless, unforgettable character and art direction of <em>Shadow of the Colossus</em>, <em>TimeSplitters 2</em>, <em>Tony Hawk's Underground</em>, <em>Rayman</em>, and <em>Soulcalibur</em>.</li>
                                     </ul>
 
-                                    <p>We aren't interested in making cheap retro nostalgia clones; we are taking those groundbreaking philosophies and modernizing them. Dark Slug Games focuses primarily on atmospheric survival horror and experimental action-adventure experiences. Whether it is using adaptive microphone mechanics in <em>It Speaks</em> to echo the weirdness of <em>SeaMan</em>, or building grounded, terrifying environments where every threat serves the narrative, my promise is simple: I want to give players that exact same jaw-dropping feeling I had when I booted up my favorite classic consoles for the very first time.</p>
+                                    <p>We aren't interested in making cheap retro nostalgia clones; we are taking those groundbreaking philosophies and modernizing them..... Dark Slug Games focuses primarily on atmospheric survival horror and experimental action-adventure experiences. Whether it is using adaptive microphone mechanics in <em>It Speaks</em> to echo the weirdness of <em>SeaMan</em>, or building grounded, terrifying environments where every threat serves the narrative, my promise is simple: I want to give players that exact same jaw-dropping feeling I had when I booted up my favorite classic consoles for the very first time.</p>
                                 </section>
 
                             </div>
@@ -473,8 +439,58 @@
             <script src="assets/js/util.js"></script>
             <script src="assets/js/main.js"></script>
             
-            <!-- Custom Ambient Audio Toggle Script -->
+            <!-- Custom Audio Ducking & Narration Controller -->
             <script>
+                // Global audio controller to prevent overlapping narrations
+                var currentNarration = null;
+                var currentNarrationBtn = null;
+
+                function toggleNarration(audioId, btnElement) {
+                    var targetAudio = document.getElementById(audioId);
+                    var ambientAudio = document.getElementById("ambient-audio");
+                    var ambientSlider = document.getElementById("ambient-volume");
+
+                    // If clicking the same narration that is currently playing, pause it
+                    if (currentNarration === targetAudio && !targetAudio.paused) {
+                        targetAudio.pause();
+                        btnElement.classList.remove("is-playing");
+                        btnElement.innerHTML = "<span>🔊</span> <span>LISTEN TO NARRATION</span>";
+                        // Restore ambient volume
+                        if (!ambientAudio.paused) ambientAudio.volume = ambientSlider.value;
+                        currentNarration = null;
+                        return;
+                    }
+
+                    // Stop any other narration currently playing
+                    if (currentNarration && !currentNarration.paused) {
+                        currentNarration.pause();
+                        currentNarration.currentTime = 0;
+                        if (currentNarrationBtn) {
+                            currentNarrationBtn.classList.remove("is-playing");
+                            currentNarrationBtn.innerHTML = "<span>🔊</span> <span>LISTEN TO NARRATION</span>";
+                        }
+                    }
+
+                    // Start new narration and apply audio ducking to background music
+                    targetAudio.play();
+                    btnElement.classList.add("is-playing");
+                    btnElement.innerHTML = "<span>❚❚</span> <span>PAUSE NARRATION</span>";
+                    currentNarration = targetAudio;
+                    currentNarrationBtn = btnElement;
+
+                    if (!ambientAudio.paused) {
+                        ambientAudio.volume = Math.min(0.15, ambientSlider.value); // Lower ambient music to 15%
+                    }
+
+                    // When narration ends, restore background music volume
+                    targetAudio.onended = function() {
+                        btnElement.classList.remove("is-playing");
+                        btnElement.innerHTML = "<span>🔊</span> <span>LISTEN TO NARRATION</span>";
+                        if (!ambientAudio.paused) ambientAudio.volume = ambientSlider.value;
+                        currentNarration = null;
+                    };
+                }
+
                 document.addEventListener('DOMContentLoaded', function() {
                     var audio = document.getElementById("ambient-audio");
                     var toggleBtn = document.getElementById("ambient-toggle");
@@ -502,7 +518,10 @@
                     });
 
                     volumeSlider.addEventListener("input", function() {
-                        audio.volume = this.value;
+                        // Only update direct audio volume if a voiceover isn't actively ducking it
+                        if (!currentNarration || currentNarration.paused) {
+                            audio.volume = this.value;
+                        }
                     });
                 });
             </script>
