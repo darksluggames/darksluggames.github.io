@@ -59,11 +59,7 @@
             .logo .symbol img { height: 130px !important; width: 130px !important; max-height: none !important; max-width: none !important; display: block !important; object-fit: contain !important; filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.8)); }
             .logo .title { font-size: 3.5em !important; font-weight: 900 !important; letter-spacing: 0.15em !important; color: #ffffff !important; text-shadow: 0 0 25px rgba(0, 242, 254, 0.3), 0 0 50px rgba(254, 9, 121, 0.15); line-height: 1 !important; }
 
-            /* "Who is DSG" Button */
-            .banner-action-btn { background: rgba(0, 242, 254, 0.1); border: 1px solid #00f2fe; color: #ffffff !important; padding: 0.6em 1.4em; border-radius: 6px; font-weight: 800; font-size: 0.9em; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none !important; transition: all 0.3s ease; white-space: nowrap; box-shadow: 0 0 15px rgba(0, 242, 254, 0.2); }
-            .banner-action-btn:hover { background: #00f2fe; color: #000 !important; box-shadow: 0 0 25px rgba(0, 242, 254, 0.7), 0 4px 15px rgba(0,0,0,0.6); transform: translateY(-2px); }
-
-            /* Hamburger Menu */
+            /* Hamburger Menu (FORCED TO FAR RIGHT!) */
             #header nav { position: static !important; margin-left: auto !important; right: auto !important; top: auto !important; }
             #header nav ul { margin: 0 !important; }
 
@@ -72,30 +68,44 @@
             .studio-sidebar { grid-column: 1; grid-row: 1 / span 2; background: rgba(255, 255, 255, 0.015); border: 1px solid rgba(255, 255, 255, 0.04); padding: 1.8em; border-radius: 12px; box-shadow: 0 15px 40px rgba(0,0,0,0.4); backdrop-filter: blur(5px); }
             .studio-main-content { grid-column: 2; grid-row: 1; }
             
+            /* Sidebar "Who is DSG" Button */
+            .sidebar-action-btn {
+                background: rgba(0, 242, 254, 0.05); border: 1px solid #00f2fe; color: #00f2fe !important; padding: 0.8em 1.4em; border-radius: 6px; font-weight: 800; font-size: 0.9em; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none !important; transition: all 0.3s ease; display: block; width: 100%; text-align: center; box-shadow: 0 0 15px rgba(0, 242, 254, 0.2); margin-bottom: 2em;
+            }
+            .sidebar-action-btn:hover { background: #00f2fe; color: #000 !important; box-shadow: 0 0 25px rgba(0, 242, 254, 0.7), 0 4px 15px rgba(0,0,0,0.6); transform: translateY(-2px); }
+
             .custom-section-title { margin-top: 2em !important; margin-bottom: 1em !important; font-size: 1.05em !important; font-weight: 800 !important; letter-spacing: 0.15em !important; text-transform: uppercase; color: #fff !important; border-bottom: 2px solid rgba(255, 255, 255, 0.08); padding-bottom: 0.4em; display: block; width: 100%; }
             .studio-sidebar .custom-section-title:first-child { margin-top: 0 !important; }
             .actions { margin-bottom: 1.5em !important; display: flex; flex-direction: column; gap: 14px; width: 100%; }
             .actions li { width: 100%; padding-left: 0 !important; }
 
-            /* --- COLOR-MATCHED NEON BUTTON GLOW SYSTEM --- */
+            /* --- UNIVERSAL NEON BUTTON GLOW SYSTEM --- */
             .actions li a.button { font-weight: 800 !important; letter-spacing: 0.08em !important; transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1) !important; border-radius: 6px !important; border: none !important; color: #fff !important; width: 100% !important; text-align: center !important; display: block !important; text-transform: uppercase; }
             .actions li a.button:hover { transform: translateY(-3px) scale(1.02) !important; filter: brightness(1.15) !important; }
-            .btn-youtube { background-color: #FF0000 !important; box-shadow: 0 0 15px rgba(255, 0, 0, 0.35), 0 6px 15px rgba(0,0,0,0.5) !important; }
-            .btn-youtube:hover { box-shadow: 0 0 25px rgba(255, 0, 0, 0.75), 0 8px 20px rgba(0,0,0,0.7) !important; }
-            .btn-tiktok { background-color: #111216 !important; border: 2px solid #00f2fe !important; color: #fff !important; box-shadow: 0 0 15px rgba(0, 242, 254, 0.3), 0 6px 15px rgba(0,0,0,0.5) !important; }
-            .btn-tiktok:hover { background-color: #00f2fe !important; color: #000 !important; box-shadow: 0 0 25px rgba(0, 242, 254, 0.75), 0 8px 20px rgba(0,0,0,0.7) !important; }
-            .btn-facebook { background-color: #1877F2 !important; box-shadow: 0 0 15px rgba(24, 119, 242, 0.35), 0 6px 15px rgba(0,0,0,0.5) !important; }
-            .btn-facebook:hover { box-shadow: 0 0 25px rgba(24, 119, 242, 0.75), 0 8px 20px rgba(0,0,0,0.7) !important; }
-            .btn-instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important; box-shadow: 0 0 15px rgba(220, 39, 67, 0.35), 0 6px 15px rgba(0,0,0,0.5) !important; }
-            .btn-instagram:hover { box-shadow: 0 0 25px rgba(220, 39, 67, 0.75), 0 8px 20px rgba(0,0,0,0.7) !important; }
-            .btn-itch { background-color: #fa5c5c !important; box-shadow: 0 0 15px rgba(250, 92, 92, 0.35), 0 6px 15px rgba(0,0,0,0.5) !important; }
-            .btn-itch:hover { box-shadow: 0 0 25px rgba(250, 92, 92, 0.75), 0 8px 20px rgba(0,0,0,0.7) !important; }
-            .btn-steam { background: linear-gradient(135deg, #1b2838 0%, #2a475e 100%) !important; border: 1px solid #66c0f4 !important; box-shadow: 0 0 15px rgba(102, 192, 244, 0.3), 0 6px 15px rgba(0,0,0,0.5) !important; }
-            .btn-steam:hover { border-color: #00f2fe !important; box-shadow: 0 0 25px rgba(102, 192, 244, 0.75), 0 8px 20px rgba(0,0,0,0.7) !important; }
-            .btn-kickstarter { background-color: #05ce78 !important; color: #000 !important; box-shadow: 0 0 15px rgba(5, 206, 120, 0.35), 0 6px 15px rgba(0,0,0,0.5) !important; }
-            .btn-kickstarter:hover { box-shadow: 0 0 25px rgba(5, 206, 120, 0.75), 0 8px 20px rgba(0,0,0,0.7) !important; }
-            .btn-kofi { background-color: #ff5e5b !important; box-shadow: 0 0 15px rgba(255, 94, 91, 0.35), 0 6px 15px rgba(0,0,0,0.5) !important; }
-            .btn-kofi:hover { box-shadow: 0 0 25px rgba(255, 94, 91, 0.75), 0 8px 20px rgba(0,0,0,0.7) !important; }
+            
+            .btn-youtube { background-color: #FF0000 !important; box-shadow: 0 0 15px rgba(255, 0, 0, 0.45), 0 6px 15px rgba(0,0,0,0.5) !important; }
+            .btn-youtube:hover { box-shadow: 0 0 25px rgba(255, 0, 0, 0.8), 0 8px 20px rgba(0,0,0,0.7) !important; }
+            
+            .btn-tiktok { background-color: #111216 !important; border: 1px solid #fe2c55 !important; color: #fff !important; box-shadow: 0 0 15px rgba(254, 44, 85, 0.45), 0 6px 15px rgba(0,0,0,0.5) !important; }
+            .btn-tiktok:hover { background-color: #fe2c55 !important; color: #fff !important; box-shadow: 0 0 25px rgba(254, 44, 85, 0.8), 0 8px 20px rgba(0,0,0,0.7) !important; }
+            
+            .btn-facebook { background-color: #1877F2 !important; box-shadow: 0 0 15px rgba(24, 119, 242, 0.45), 0 6px 15px rgba(0,0,0,0.5) !important; }
+            .btn-facebook:hover { box-shadow: 0 0 25px rgba(24, 119, 242, 0.8), 0 8px 20px rgba(0,0,0,0.7) !important; }
+            
+            .btn-instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important; box-shadow: 0 0 15px rgba(220, 39, 67, 0.45), 0 6px 15px rgba(0,0,0,0.5) !important; }
+            .btn-instagram:hover { box-shadow: 0 0 25px rgba(220, 39, 67, 0.8), 0 8px 20px rgba(0,0,0,0.7) !important; }
+            
+            .btn-itch { background-color: #fa5c5c !important; box-shadow: 0 0 15px rgba(250, 92, 92, 0.45), 0 6px 15px rgba(0,0,0,0.5) !important; }
+            .btn-itch:hover { box-shadow: 0 0 25px rgba(250, 92, 92, 0.8), 0 8px 20px rgba(0,0,0,0.7) !important; }
+            
+            .btn-steam { background: linear-gradient(135deg, #1b2838 0%, #2a475e 100%) !important; border: 1px solid #66c0f4 !important; box-shadow: 0 0 15px rgba(102, 192, 244, 0.45), 0 6px 15px rgba(0,0,0,0.5) !important; }
+            .btn-steam:hover { border-color: #00f2fe !important; box-shadow: 0 0 25px rgba(102, 192, 244, 0.8), 0 8px 20px rgba(0,0,0,0.7) !important; }
+            
+            .btn-kickstarter { background-color: #05ce78 !important; color: #000 !important; box-shadow: 0 0 15px rgba(5, 206, 120, 0.45), 0 6px 15px rgba(0,0,0,0.5) !important; }
+            .btn-kickstarter:hover { box-shadow: 0 0 25px rgba(5, 206, 120, 0.8), 0 8px 20px rgba(0,0,0,0.7) !important; }
+            
+            .btn-kofi { background-color: #ff5e5b !important; box-shadow: 0 0 15px rgba(255, 94, 91, 0.45), 0 6px 15px rgba(0,0,0,0.5) !important; }
+            .btn-kofi:hover { box-shadow: 0 0 25px rgba(255, 94, 91, 0.8), 0 8px 20px rgba(0,0,0,0.7) !important; }
 
             /* --- 3D FLOATING MANIFESTO --- */
             .studio-manifesto { font-size: 1.18em !important; line-height: 1.8 !important; color: #b0b4d0 !important; background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%); padding: 2em; border-left: 4px solid #fa5c5c; border-radius: 0 12px 12px 0; margin-top: 1.5em !important; margin-bottom: 2em !important; box-shadow: 0 15px 35px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05); transition: transform 0.4s ease; position: relative; }
@@ -172,10 +182,8 @@
             }
             @media (max-width: 600px) {
                 .logo .symbol img { height: 70px !important; width: 70px !important; margin-right: 15px !important; }
-                .logo .title { font-size: 1.6em !important; } /* Scaled slightly down to prevent overflow */
-                .banner-action-btn { display: none; }
+                .logo .title { font-size: 1.6em !important; }
                 .actions li { width: 100%; }
-                /* Padding adjustments for mobile overflow prevention */
                 .vision-section { padding: 1.5em 1.2em !important; }
                 .studio-manifesto { padding: 1.5em 1.2em !important; }
                 .inner { padding-left: 15px !important; padding-right: 15px !important; }
@@ -196,8 +204,6 @@
                                 <span class="title">DARK SLUG GAMES</span>
                             </a>
                             
-                            <a href="generic.html" class="banner-action-btn">Who is DARK SLUG GAMES?</a>
-                            
                             <nav id="main-nav">
                                 <ul>
                                     <li><a href="#menu">Menu</a></li>
@@ -211,7 +217,7 @@
                         <h2>Menu</h2>
                         <ul>
                             <li><a href="index.html">Home</a></li>
-                            <li><a href="generic.html">Who is DARK SLUG GAMES</a></li>
+                            <li><a href="generic.html">Who is Dark Slug Games</a></li>
                             <li><a href="elements.html">Legal</a></li>
                         </ul>
                     </nav>
@@ -224,7 +230,11 @@
                                 
                                 <!-- LEFT COLUMN: BUTTON ECOSYSTEM -->
                                 <aside class="studio-sidebar">
-                                    <h3 class="custom-section-title">Social Media</h3>
+                                    
+                                    <!-- Moved "Who is DSG" Button directly above Social Media -->
+                                    <a href="generic.html" class="sidebar-action-btn">Who is DARK SLUG GAMES?</a>
+
+                                    <h3 class="custom-section-title" style="margin-top: 0 !important;">Social Media</h3>
                                     <ul class="actions">
                                         <li><a href="https://www.youtube.com/@DarkSlugGames" target="_blank" class="button btn-youtube icon brands fa-youtube">YouTube</a></li>
                                         <li><a href="https://www.tiktok.com/@darksluggames" target="_blank" class="button btn-tiktok icon brands fa-tiktok">TikTok</a></li>
@@ -249,7 +259,7 @@
                                 <main class="studio-main-content">
                                     
                                     <header>
-                                        <h1 style="font-weight: 800; color: #fff; line-height: 1.3;">Games by a gamer, for gamers.<br />
+                                        <h1 style="font-weight: 800; color: #fff; line-height: 1.3;">Games by a Gamer, for Gamers.<br />
                                         <span style="font-size: 0.75em; color: #ffffff; font-weight: 400;">An Independent Game Studio & Publisher</span></h1>
                                         
                                         <div class="studio-manifesto">
