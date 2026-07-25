@@ -44,11 +44,7 @@
             .highlight-quote { font-size: 1.3em; font-style: italic; color: #fff; border-left: 4px solid #00f2fe; padding-left: 1.5em; margin: 2em 0; line-height: 1.6; }
 
             /* --- COMPACT NARRATION BUTTONS & BREATHING GLOW --- */
-            @keyframes breathingGlow {
-                0% { box-shadow: 0 0 15px rgba(250, 92, 92, 0.5); }
-                50% { box-shadow: 0 0 28px rgba(250, 92, 92, 1), 0 0 10px rgba(255, 255, 255, 0.3); }
-                100% { box-shadow: 0 0 15px rgba(250, 92, 92, 0.5); }
-            }
+            @keyframes breathingGlow { 0% { box-shadow: 0 0 15px rgba(250, 92, 92, 0.5); } 50% { box-shadow: 0 0 28px rgba(250, 92, 92, 1), 0 0 10px rgba(255, 255, 255, 0.3); } 100% { box-shadow: 0 0 15px rgba(250, 92, 92, 0.5); } }
             .narration-btn { background: rgba(0, 242, 254, 0.1); border: 1px solid #00f2fe; color: #00f2fe !important; padding: 0.35em 0.9em !important; border-radius: 50px; font-weight: 800; font-size: 0.75em !important; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; margin-bottom: 2em; transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1); box-shadow: 0 0 10px rgba(0, 242, 254, 0.15); }
             .narration-btn:hover { background: #00f2fe; color: #000 !important; box-shadow: 0 0 20px rgba(0, 242, 254, 0.8), 0 4px 10px rgba(0,0,0,0.6); transform: translateY(-2px); }
             .narration-btn.is-playing { background: #fa5c5c !important; border-color: #fa5c5c !important; color: #fff !important; animation: breathingGlow 2.5s infinite ease-in-out !important; }
