@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <!--
-    Phantom by HTML5 UP (Modified: Dark Slug Games Definitive Edition)
+    Phantom by HTML5 UP (Modified: Dark Slug Games Alignment Fix Edition)
     html5up.net | @ajlkn | Free under CCA 3.0 license
 -->
 <html>
@@ -49,8 +49,9 @@
             .sidebar-action-btn { background: rgba(0, 242, 254, 0.05); border: 1px solid #00f2fe; color: #00f2fe !important; padding: 0.8em 1.4em; border-radius: 6px; font-weight: 800; font-size: 0.9em; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none !important; transition: all 0.3s ease; display: block; width: 100%; text-align: center; box-shadow: 0 0 15px rgba(0, 242, 254, 0.2); margin-bottom: 2em; }
             .sidebar-action-btn:hover { background: #00f2fe; color: #000 !important; box-shadow: 0 0 25px rgba(0, 242, 254, 0.7), 0 4px 15px rgba(0,0,0,0.6); transform: translateY(-2px); }
 
-            .custom-section-title { margin-top: 2em !important; margin-bottom: 1em !important; font-size: 1.05em !important; font-weight: 800 !important; letter-spacing: 0.15em !important; text-transform: uppercase; color: #fff !important; border-bottom: 2px solid rgba(255, 255, 255, 0.08); padding-bottom: 0.4em; display: block; width: 100%; }
-            .studio-sidebar .custom-section-title:first-child { margin-top: 0 !important; }
+            /* STRICT SIDEBAR HEADING ALIGNMENT FIX */
+            .custom-section-title { margin-top: 2em !important; margin-bottom: 1em !important; font-size: 1.05em !important; font-weight: 800 !important; letter-spacing: 0.15em !important; text-transform: uppercase; color: #fff !important; border-bottom: 2px solid rgba(255, 255, 255, 0.08); padding-bottom: 0.4em; display: block; width: 100%; text-align: left !important; margin-left: 0 !important; padding-left: 0 !important; }
+            .studio-sidebar .custom-section-title:first-of-type { margin-top: 0 !important; }
             .actions { margin-bottom: 1.5em !important; display: flex; flex-direction: column; gap: 14px; width: 100%; }
             .actions li { width: 100%; padding-left: 0 !important; }
 
@@ -205,10 +206,10 @@
                                 <!-- LEFT COLUMN: BUTTON ECOSYSTEM -->
                                 <aside class="studio-sidebar">
                                     
-                                    <!-- Moved "Who is DSG" Button directly above Social Media -->
+                                    <!-- "Who is DSG" Button -->
                                     <a href="generic.html" class="sidebar-action-btn">Who is DARK SLUG GAMES?</a>
 
-                                    <h3 class="custom-section-title" style="margin-top: 0 !important;">Social Media</h3>
+                                    <h3 class="custom-section-title">Social Media</h3>
                                     <ul class="actions">
                                         <li><a href="https://discord.gg/nzcCJYtQq" target="_blank" class="button btn-discord icon brands fa-discord">Discord</a></li>
                                         <li><a href="https://www.youtube.com/@DarkSlugGames" target="_blank" class="button btn-youtube icon brands fa-youtube">YouTube</a></li>
